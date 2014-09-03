@@ -2,6 +2,8 @@
 
 There is no fancy magic behind the Forty Sass Template. The template exists to give you a light and base level structure to build off of.  We're versed and familiar with [OOCSS](http://oocss.org/) and [SMACSS] (http://smacss.com/), and we have hints of that sprinkled throughout the template.
 
+##**Template Structure**
+```
 sass/
 |
 |– app/
