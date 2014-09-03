@@ -53,12 +53,23 @@ sass/
 
 ##**Styleguide**
 
-####General Styling
+####General Rules
 * When possible, avoid using ID's, use classes as much as possible.
-* Classes and IDs are lowercase with words separated by a dash.
 * Don't over-qualify selectors.
 * Don't get crazy with nesting of rules.
 * CSS rules should be comma seperated and reside on new lines.
+* Nest all pseduo-classes directly beneath base properties and values.
+* Media queries belong right after pseudo-classes.
+  - Min-Width - smallest to largest
+  - Max-Width - largest to smallest
+* Use auto prefixer, check for settings in the gruntfile.js
+* Break into as many small files as it makes sense:
+  - Produces easier to maintain styles.
+  - Easier to find rules.
+* Be generous with comments and as descriptive as possible.
+* Use z-index scale found in utilities.scss
+
+####Properties
 * Order of CSS properties:
   - Positioning
   - Display & Box Model
@@ -71,25 +82,25 @@ sass/
   - @extend(s)
   - @include(s)
   - "regular" styles
-* Nest all pseduo-classes directly beneath base properties and values.
-* Media queries belong right after pseudo-classes.
-  - Min-Width - smallest to largest
-  - Max-Width - largest to smallest
-* Use auto prefixer, check for settings in the gruntfile.js
-* Break into as many small files as it makes sense:
-  - Produces easier to maintain styles.
-  - Easier to find rules.
-* Be generous with comments and as descriptive as possible.
+
+####Naming Conventions
+* Classes and IDs are lowercase with words separated by a dash.
 * Variablize all colors, numbers, etc.
   - $color-blue
   - $color-azure
+  - $color-purple
 * Images
   - Image file names are lowercase with words separated by a dash.
   - Image file names are prefixed with their usage.
     - icon-home.png
     - bg-home.png
     - hero-about.png
-* Use z-index scale found in utilities.scss
+
+####Style Scoping
+All of your styles should be reusing general component level styles defined below. Page level name-spaces however can be helpful for overriding generic components in very specific contexts.
+
+Page level overrides should be minimal and under a single page level class nest.
+
 * Use name-spacing at component level.
   - nav
   - nav-bar
