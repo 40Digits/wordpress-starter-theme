@@ -58,21 +58,21 @@ sass/
 * Try not to over-qualify selectors.
 * Use one comma separated selector per line in multi-selector rule sets.
 * Order of CSS properties:
-⋅⋅1. Positioning
-⋅⋅2. Display & Box Model
-⋅⋅3. Color
-⋅⋅4. Text
-⋅⋅5. Transform
-⋅⋅6. Animations
-⋅⋅7. Z-index
+  1. Positioning
+  2. Display & Box Model
+  3. Color
+  4. Text
+  5. Transform
+  6. Animations
+  7. Z-index
 * Order of Sass extends and properties:
-⋅⋅1. @extend(s)
-⋅⋅2. "regular" styles
-⋅⋅3. @include(s)
+  1. @extend(s)
+  2. "regular" styles
+  3. @include(s)
 * Nest all pseduo-classes directly beneath base properties and values.
 * Media queries belong right after pseudo-classes.
-⋅⋅* Min-Width - smallest to largest
-⋅⋅* Max-Width - largest to smallest
+  - Min-Width - smallest to largest
+  - Max-Width - largest to smallest
 * Keep it OOCSS and use un-nested class names
 * List any class modifiers after all module children
 * Use auto prefixer, check for settings in the gruntfile.js
