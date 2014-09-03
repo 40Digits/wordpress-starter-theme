@@ -51,6 +51,28 @@ sass/
 `– style                    # primary Sass file
 ```
 
+##**Recommended Usage**
+
+####app/
+
+The **app/** folder contains all of your application styles. These styles vary anywhere from small partials to templates to pages. In order to keep consistency going, especially in Wordpress projects. Please use the following prefix method.
+
+| Prefix        | Usage                                                  |
+| --------------|--------------------------------------------------------|
+| page-         | pages                                                  |
+| temp-         | template specific files                                |
+| block-        | modular blocks that get re-used throughout application |
+| cpt-          | anything that is a custom post type                    |
+
+Your **global.scss** file should contain any and all global layout styles that do not fit in a specific style-sheet. Any and all IE styles that can't be written inline, should reside inside the **ie.scss** style-sheet.
+
+####helpers/
+
+The **helpers/** folder generally contains tools which help with formatting of your application. They either give you ways to sync out with javascript, give you functions, or help with resets. In most cases you won't be making many edits here, unless you are adding mixins and functions that are project specific. In that case, you would be making modifications to **functions.scss** and **utilities.scss**.
+
+
+
+
 ##**Styleguide**
 
 ####General Rules
@@ -105,7 +127,7 @@ All of your styles should be reusing general component level styles defined belo
 
 Page level overrides should be minimal and under a single page level class nest.
 
-Use name-spacing at component level:
+Component level name-spacing:
 
 * nav
 * nav-bar
