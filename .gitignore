@@ -1,8 +1,6 @@
 # Grunt #
 #########
 node_modules
-package.json
-Gruntfile.js
 
 # Compiled source #
 ###################

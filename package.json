@@ -1,0 +1,22 @@
+{
+  "name": "Truman-Library",
+  "version": "0.1.0",
+  "devDependencies": {
+    "css-parse": "^1.5.3",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "^0.7.3",
+    "grunt-combine-media-queries": "^1.0.15",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://besim@bitbucket.org/40digits/truman-library.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
