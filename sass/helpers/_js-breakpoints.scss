@@ -8,13 +8,15 @@
 // Media Query Indicator Mixin
 //---------------------------------
 
-@mixin jsbp($mq-name) {
-	head {
-		font-family: "$mq-name";
-	}
-	body:after {
-		content: "$mq-name";
-		display: none;
+@mixin jsbp($mq-name, $mq-visible-name) {
+	@include mq($mq-name) {
+		head {
+			font-family: $mq-visible-name;
+		}
+		body:after {
+			content: $mq-visible-name;
+			display: none;
+		}
 	}
 }
 
@@ -23,38 +25,20 @@
 //---------------------------------
 
 // Phone Landscape +
-@include jsbp(mq-min-mini);
+@include jsbp(mini, 'mq-min-mini');
 // E-Readers +
-@include jsbp(mq-min-small);
+@include jsbp(small, 'mq-min-small');
 // Tablets +
-@include jsbp(mq-min-medium);
+@include jsbp(medium, 'mq-min-medium');
 // Large Desktops + Tablet Landscape +
-@include jsbp(mq-min-large);
+@include jsbp(large, 'mq-min-large');
 // Desktops Larger +
-@include jsbp(mq-min-xlarge);
+@include jsbp(xlarge, 'mq-min-xlarge');
 // Desktops Even Larger +
-@include jsbp(mq-min-xxlarge);
+@include jsbp(xxlarge, 'mq-min-xxlarge');
 // Phone Portrait Down +
-@include jsbp(mq-max-tiny);
-
+@include jsbp(max-tiny, 'mq-mini');
 // Tablet Portrait
-@include mq(tab-port) {
-	head {
-		font-family:"mq-portrait";
-	}
-	body:after{
-		content: "mq-portrait";
-		display:none;
-	}
-}
-
+@include jsbp(tab-port, 'mq-portrait');
 // Tablet Landscape
-@include mq(tab-land) {
-	head {
-		font-family:"mq-landscape";
-	}
-	body:after{
-		content: "mq-landscape";
-		display:none;
-	}
-}
+@include jsbp(tab-land, 'mq-landscape');

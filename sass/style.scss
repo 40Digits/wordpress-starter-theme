@@ -1,12 +1,3 @@
-/*!
-    Theme Name: Theme Name
-    Theme URL: http://www.site-url.com/
-    Description: A short description!
-    Author: 40Digits
-    Author URI: http://40digits.com
-    Version: 1.0
-*/
-
 //---------------------------------
 // Setup
 //---------------------------------
@@ -28,7 +19,7 @@
 @import "helpers/js-breakpoints";
 @import "helpers/fonts";
 @import "helpers/utilities";
-@import "helpers/general";
+@import "helpers/mixins";
 
 //---------------------------------
 // Modules

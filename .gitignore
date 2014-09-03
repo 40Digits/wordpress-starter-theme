@@ -1,3 +1,9 @@
+# Grunt #
+#########
+node_modules
+package.json
+Gruntfile.js
+
 # Compiled source #
 ###################
 *.com
@@ -39,6 +45,7 @@ Thumbs.db
 .sass-cache
 *.css
 config.rb
+sass-compile
 
 # Sublime #
 ###########
