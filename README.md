@@ -19,11 +19,11 @@ sass/
 |
 |– helpers/
 |   |– fonts                # Contains all your @imports, @font-face, and third-party fonts
-|   |– functions            # Application _mixins_ & _functions_
+|   |– functions            # Application mixins & functions
 |   |– js-breakpoints       # Syncs up our CSS Media Queries to work with [MQ Sync](https://github.com/40Digits/jquery-mq-sync)
 |   |– media-queries        # Media query mixin
 |   |– reset                # Browser reset stylesheet
-|   |– utilities            # Utilities, _%placeholders_ and _%extends_ to dev faster & easier
+|   |– utilities            # Utilities, %placeholders and %extends to dev faster & easier
 |
 |– layout/
 |   |– footer               # Stypes that apply to the footer of application
@@ -55,21 +55,27 @@ sass/
 
 ####app/
 
-The **app/** folder contains all of your application styles. These styles vary anywhere from small partials to templates to pages. In order to keep consistency going, especially in Wordpress projects. Please use the following prefix method.
+The [app/](https://github.com/40Digits/forty-sass/tree/master/app) folder contains all of your application styles. These styles vary anywhere from small partials to templates to pages. In order to keep consistency going, especially in Wordpress projects. Please use the following prefix method.
 
 | Prefix        | Usage                                                  |
-| --------------|--------------------------------------------------------|
+| ------------- | ------------------------------------------------------ |
 | page-         | pages                                                  |
 | temp-         | template specific files                                |
 | block-        | modular blocks that get re-used throughout application |
 | cpt-          | anything that is a custom post type                    |
 
-Your **global.scss** file should contain any and all global layout styles that do not fit in a specific style-sheet. Any and all IE styles that can't be written inline, should reside inside the **ie.scss** style-sheet.
+Your [global.scss](https://github.com/40Digits/forty-sass/blob/master/app/_global.scss) file should contain any and all global layout styles that do not fit in a specific style-sheet. Any and all IE styles that can't be written inline, should reside inside the [ie.scss](https://github.com/40Digits/forty-sass/blob/master/app/_global.scss) style-sheet.
 
 ####helpers/
 
-The **helpers/** folder generally contains tools which help with formatting of your application. They either give you ways to sync out with javascript, give you functions, or help with resets. In most cases you won't be making many edits here, unless you are adding mixins and functions that are project specific. In that case, you would be making modifications to **functions.scss** and **utilities.scss**.
+The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folder generally contains tools which help with formatting of your application. They either give you ways to sync with javascript, give you functions, or help with resets. In most cases you won't be making many edits here, unless you are adding mixins and functions that are project specific. In that case, you would be making modifications to [functions.scss](https://github.com/40Digits/forty-sass/blob/master/helpers/_functions.scss) and [utilities.scss](https://github.com/40Digits/forty-sass/blob/master/helpers/_utilities.scss).
 
+| File          | Usage                                                  |
+| ------------- | ------------------------------------------------------ |
+| fonts         | When using third-party fonts, it's recommended that you utilize the font mixin. For services such as typekit, you do not need to add in a @font-face. Where as for services such as fonts.com, which have an odd font-weight association, it's recommended you utilize an @font-face for best results.                                                |
+| functions     | You should place all of your project specific mixins in here. |
+| js-breakpoints| Syncs up our CSS Media Queries to work with [MQ Sync](https://github.com/40Digits/jquery-mq-sync) |
+| media-queries | Should not be edited as it contains the mixin necessary to make all of the media queries work. |
 
 
 
