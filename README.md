@@ -57,8 +57,6 @@ sass/
 * When possible, avoid using ID's, use classes as much as possible.
 * Don't over-qualify selectors.
 * Don't get crazy with nesting of rules.
-* CSS rules should be comma seperated and reside on new lines.
-* Nest all pseduo-classes directly beneath base properties and values.
 * Media queries belong right after pseudo-classes.
   - Min-Width - smallest to largest
   - Max-Width - largest to smallest
@@ -67,9 +65,9 @@ sass/
   - Produces easier to maintain styles.
   - Easier to find rules.
 * Be generous with comments and as descriptive as possible.
-* Use z-index scale found in utilities.scss
 
 ####Properties
+* CSS rules should be comma seperated and reside on new lines.
 * Order of CSS properties:
   - Positioning
   - Display & Box Model
@@ -82,6 +80,8 @@ sass/
   - @extend(s)
   - @include(s)
   - "regular" styles
+* Nest all pseduo-classes directly beneath base properties and values.
+* Use z-index scale found in utilities.scss
 
 ####Naming Conventions
 * Classes and IDs are lowercase with words separated by a dash.
@@ -95,18 +95,42 @@ sass/
     - icon-home.png
     - bg-home.png
     - hero-about.png
+* .js- prefixed class names for elements relying upon javascript
+* .is- prefixed class names for stateful classes
+  - .is-active
+  - .is-enabled
 
 ####Style Scoping
 All of your styles should be reusing general component level styles defined below. Page level name-spaces however can be helpful for overriding generic components in very specific contexts.
 
 Page level overrides should be minimal and under a single page level class nest.
 
-* Use name-spacing at component level.
-  - nav
-  - nav-bar
-  - header-global
-  - header-about
-  - section-hero
-  - section-welcome
-  - module-wysiwyg
-  - module-accordion
+Use name-spacing at component level:
+
+* nav
+* nav-bar
+* header-global
+* header-about
+* section-hero
+* section-welcome
+* module-wysiwyg
+* module-accordion
+
+####Comments
+Use comments to seperate logical groups of styles within a document. This also allows us to convert from .scss <-> .sass without any hikcups. To get uniforminity with comments, please use the following three.
+
+* The top level of your sass file should contain the name in all uppercaps
+* Inside your sass file, divide sections up with a comment header
+* And for single properties, use //
+
+```
+//=================================
+// GLOBAL STYLES
+//=================================
+
+//---------------------------------
+// Section Comment Header
+//---------------------------------
+
+// Property commments
+```
