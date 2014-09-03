@@ -1,0 +1,60 @@
+//=================================
+// JAVASCRIPT BREAKPOINTS
+//=================================
+
+// Do no edit unless you know what you are doing.
+
+//---------------------------------
+// Media Query Indicator Mixin
+//---------------------------------
+
+@mixin jsbp($mq-name) {
+	head {
+		font-family: "$mq-name";
+	}
+	body:after {
+		content: "$mq-name";
+		display: none;
+	}
+}
+
+//---------------------------------
+// Define the JS Breakpoints
+//---------------------------------
+
+// Phone Landscape +
+@include jsbp(mq-min-mini);
+// E-Readers +
+@include jsbp(mq-min-small);
+// Tablets +
+@include jsbp(mq-min-medium);
+// Large Desktops + Tablet Landscape +
+@include jsbp(mq-min-large);
+// Desktops Larger +
+@include jsbp(mq-min-xlarge);
+// Desktops Even Larger +
+@include jsbp(mq-min-xxlarge);
+// Phone Portrait Down +
+@include jsbp(mq-max-tiny);
+
+// Tablet Portrait
+@include mq(tab-port) {
+	head {
+		font-family:"mq-portrait";
+	}
+	body:after{
+		content: "mq-portrait";
+		display:none;
+	}
+}
+
+// Tablet Landscape
+@include mq(tab-land) {
+	head {
+		font-family:"mq-landscape";
+	}
+	body:after{
+		content: "mq-landscape";
+		display:none;
+	}
+}

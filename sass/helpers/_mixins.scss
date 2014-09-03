@@ -1,0 +1,108 @@
+//=================================
+// MIXINS
+//=================================
+
+//---------------------------------
+// Layout
+//---------------------------------
+
+// max-width container with multiple options, see variables for options
+// ex: @include row(medium)
+@mixin row($width: false) {
+	@if $width == small {
+		max-width: $max-width-small;
+	}
+	@if $width == medium {
+		max-width: $max-width-medium;
+	}
+	@if $width == large {
+		max-width: $max-width-large;
+	}
+	width: 100%;
+	margin: 0 auto;
+}
+
+// gutter between columns, see variables for options
+// ex: @include gutter or @include gutter(large)
+@mixin gutter($size: false) {
+	@if $size == large {
+		padding-left: $gutter;
+		padding-right: $gutter;
+		@include mq(medium) {
+			padding-left: $gutter-large;
+			padding-right: $gutter-large;
+		}
+	} @else {
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+}
+
+//---------------------------------
+// Your Mixins
+//---------------------------------
+
+
+//---------------------------------
+// Social Media Icons
+//---------------------------------
+
+// @mixin sm-icons( $color: #000, $hover: #fff, $padding: 0 5px, $fb: false, $tw: false, $pi: false, $em: false ) {
+// 	a {
+// 		color: $color;
+// 		line-height: 24px;
+// 		height: inherit;
+// 		border-bottom: 0;
+
+// 		&:before {
+// 			padding: $padding;
+// 		}
+
+// 		&:hover {
+// 			color: $hover;
+// 			border-bottom: 0;
+// 		}
+// 	}
+
+// 	// hide label visually, but there for screen readers
+// 	a span {
+// 		@extend %visually-hidden;
+// 	}
+
+// 	// facebook
+// 	@if $fb {
+// 		.sm-fb {
+// 			&:before {
+// 				@include icon-font(facebook);
+// 			}
+// 		}
+// 	}}
+// 	}
+
+// 	// twitter
+// 	@if $tw {
+// 		.sm-tw {
+// 			&:before {
+// 				@include icon-font(twitter);
+// 			}
+// 		}
+// 	}
+
+// 	// pinterest
+// 	@if $pi {
+// 		.sm-pi {
+// 			&:before {
+// 				@include icon-font(pinterest);
+// 			}
+// 		}
+// 	}
+
+// 	// email
+// 	@if $em {
+// 		.sm-em {
+// 			&:before {
+// 				@include icon-font(email);
+// 			}
+// 		}
+// 	}
+// }

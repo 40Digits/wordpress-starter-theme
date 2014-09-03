@@ -1,0 +1,76 @@
+/*!
+    Theme Name: Theme Name
+    Theme URL: http://www.site-url.com/
+    Description: A short description!
+    Author: 40Digits
+    Author URI: http://40digits.com
+    Version: 1.0
+*/
+
+//---------------------------------
+// Setup
+//---------------------------------
+
+@import "helpers/reset";
+
+//---------------------------------
+// Variables
+//---------------------------------
+
+@import "variables/variables";
+@import "variables/colors";
+
+//---------------------------------
+// Helpers
+//---------------------------------
+
+@import "helpers/media-queries";
+@import "helpers/js-breakpoints";
+@import "helpers/fonts";
+@import "helpers/utilities";
+@import "helpers/general";
+
+//---------------------------------
+// Modules
+//---------------------------------
+
+// Default Modules
+@import "modules/print";
+@import "modules/typography";
+@import "modules/form-elements";
+
+// CMS
+@import "modules/cms-wordpress";
+
+// Optional Modules
+@import "modules/keyframes";
+@import "modules/responsive-grid";
+
+//---------------------------------
+// Layout
+//---------------------------------
+
+@import "layout/header";
+@import "layout/nav";
+@import "layout/sidebar";
+@import "layout/footer";
+@import "layout/wysiwyg";
+
+//---------------------------------
+// Vendor
+//---------------------------------
+
+@import "vendor/fluidbox";
+@import "vendor/gravity-forms";
+
+//---------------------------------
+// Application
+//---------------------------------
+
+@import "app/global";
+
+//---------------------------------
+// Browser Specific
+//---------------------------------
+
+@import "app/ie";

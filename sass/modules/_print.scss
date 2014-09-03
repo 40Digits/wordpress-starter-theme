@@ -1,0 +1,15 @@
+//=================================
+// PRINT
+//=================================
+
+*,
+*:before,
+*:after {
+	@include mq(print) {
+		background: transparent !important;
+		color: #000 !important;
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important
+	}
+}

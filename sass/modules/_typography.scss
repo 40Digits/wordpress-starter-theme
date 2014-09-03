@@ -1,0 +1,128 @@
+//=================================
+// TYPOGRAPHY
+//=================================
+
+//---------------------------------
+// General
+//---------------------------------
+
+// If you want to use rem sizing, uncomment these and customize to your liking
+
+html {
+	font-size: $font-size-default;
+
+	// @include mq(medium) {
+	// 	font-size: $font-size-medium;
+	// }
+	// @include mq(large) {
+	// 	font-size: $font-size-large;
+	// }
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font-size: $font-size-default;
+	@include font-smoothing;
+}
+
+a {
+	color: $color-blue;
+	text-decoration: none;
+	&:hover {
+		color: $color-blue;
+	}
+}
+
+//---------------------------------
+// Headlines
+//---------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	position: relative;
+	line-height: 1em;
+
+	a {
+		color: #000;
+	}
+}
+
+//---------------------------------
+// Text Components
+//---------------------------------
+
+p,
+dl,
+address {
+	font-size: em(16);
+	line-height: em(20);
+}
+
+p,
+dl {
+	margin-bottom: 20px;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+//---------------------------------
+// List Style
+//---------------------------------
+
+ul,
+ol,
+dd {
+	line-height: 1.5em;
+}
+
+ul,
+ol {
+	margin-bottom: 20px;
+}
+
+li {
+	font-size: inherit;
+	line-height: 1.5em;
+}
+
+//---------------------------------
+// Placeholder Extend Font Sizes
+//---------------------------------
+
+// This is handy if you're not using rems and want to control your own sizes on breakpoints
+
+%font-large {
+	font-size: em(28);
+	@include mq(small) {
+		font-size: em(30);
+	}
+	@include mq(medium) {
+		font-size: em(36);
+	}
+	@include mq(large) {
+		font-size: em(46);
+	}
+}
+
+%font-medium {
+	font-size: em(18);
+	@include mq(medium) {
+		font-size: em(22);
+	}
+	@include mq(large) {
+		font-size: em(24);
+	}
+}

@@ -1,0 +1,135 @@
+//=================================
+// UTILITIES
+//=================================
+
+// Font-smoothing for OSX
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+// Absolute center content
+@mixin abs-center {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+// Placeholder Mixin
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+// Keyframes
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// Hide something to where it is still accessible on screen readers.
+%visually-hidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+
+//---------------------------------
+// Cross Browser
+//---------------------------------
+
+// Cross-browser alpha transparency for old IE
+@mixin rgba($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: transparent;
+	background-color: $rgba;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+
+// Cross-browser opacity for old IE
+@mixin opacity($alpha) {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$alpha*100)";
+	filter: alpha(opacity=$alpha*100);
+	-webkit-opacity: $alpha;
+	-moz-opacity: $alpha;
+	-khtml-opacity: $alpha;
+	opacity: $alpha;
+}
+
+// Cross-browser background-cover for old IE
+// ex: @extend %bg-cover
+// https://raw.githubusercontent.com/louisremi/background-size-polyfill/gh-pages/backgroundsize.min.htc
+%bg-cover {
+	background-repeat: no-repeat;
+	background-size: cover;
+	-ms-behavior: url('assets/images/backgroundsize.min.htc');
+	background-position: center center;
+}
+
+// Remove all list styling
+// ex: @extend %naked-list
+%naked-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+// Remove all button styling and reset it to default
+// ex: @extend %naked-button
+%naked-button {
+	background: transparent;
+	outline: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+//---------------------------------
+// Class Helpers
+//---------------------------------
+
+// Clear class helpers
+.cf,
+.clear,
+.clearfix {
+	@extend %cf;
+}
+
+// Visually hide elements while at the same time make them accessible on screen readers
+.visually-hidden {
+	@extend %visually-hidden;
+}
