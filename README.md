@@ -54,28 +54,48 @@ sass/
 ##**Styleguide**
 
 ####General Styling
-* Avoid using ID's.  Use classes instead
-* Try not to over-qualify selectors.
-* Use one comma separated selector per line in multi-selector rule sets.
+* When possible, avoid using ID's, use classes as much as possible.
+* Classes and IDs are lowercase with words separated by a dash.
+* Don't over-qualify selectors.
+* Don't get crazy with nesting of rules.
+* CSS rules should be comma seperated and reside on new lines.
 * Order of CSS properties:
-  1. Positioning
-  2. Display & Box Model
-  3. Color
-  4. Text
-  5. Transform
-  6. Animations
-  7. Z-index
+  - Positioning
+  - Display & Box Model
+  - Color
+  - Text
+  - Transform
+  - Animations
+  - Z-index
 * Order of Sass extends and properties:
-  1. @extend(s)
-  2. "regular" styles
-  3. @include(s)
+  - @extend(s)
+  - @include(s)
+  - "regular" styles
 * Nest all pseduo-classes directly beneath base properties and values.
 * Media queries belong right after pseudo-classes.
   - Min-Width - smallest to largest
   - Max-Width - largest to smallest
-* Keep it OOCSS and use un-nested class names
-* List any class modifiers after all module children
 * Use auto prefixer, check for settings in the gruntfile.js
-* Break into as many small files as makes sense
-* Be generous with comments & use same comment block style => "// Comment Text"
+* Break into as many small files as it makes sense:
+  - Produces easier to maintain styles.
+  - Easier to find rules.
+* Be generous with comments and as descriptive as possible.
 * Variablize all colors, numbers, etc.
+  - $color-blue
+  - $color-azure
+* Images
+  - Image file names are lowercase with words separated by a dash.
+  - Image file names are prefixed with their usage.
+    - icon-home.png
+    - bg-home.png
+    - hero-about.png
+* Use z-index scale found in utilities.scss
+* Use name-spacing at component level.
+  - nav
+  - nav-bar
+  - header-global
+  - header-about
+  - section-hero
+  - section-welcome
+  - module-wysiwyg
+  - module-accordion
