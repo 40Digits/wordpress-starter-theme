@@ -8,7 +8,7 @@
 // Variables
 //---------------------------------
 
-@import "variables/variables";
+@import "variables/settings";
 @import "variables/colors";
 
 //---------------------------------
@@ -19,7 +19,7 @@
 @import "helpers/js-breakpoints";
 @import "helpers/fonts";
 @import "helpers/utilities";
-@import "helpers/mixins";
+@import "helpers/functions";
 
 //---------------------------------
 // Modules
@@ -28,7 +28,7 @@
 // Default Modules
 @import "modules/print";
 @import "modules/typography";
-@import "modules/form-elements";
+@import "modules/forms";
 
 // CMS
 @import "modules/cms-wordpress";
