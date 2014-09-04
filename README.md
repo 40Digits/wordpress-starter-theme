@@ -74,7 +74,7 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 
 | File            | Usage                                                  |
 | :-------------- | :----------------------------------------------------- |
-| ![alt text](http://i.imgur.com/nOLP3cd.png) fonts           | When using third-party fonts, it's recommended that you utilize the font mixin. For services such as typekit, you do not need to add in a @font-face. Where as for services such as fonts.com, which have an odd font-weight association, it's recommended you utilize an @font-face for best results. See file for usage examples. |
+| fonts           | When using third-party fonts, it's recommended that you utilize the font mixin. For services such as typekit, you do not need to add in a @font-face. Where as for services such as fonts.com, which have an odd font-weight association, it's recommended you utilize an @font-face for best results. See file for usage examples. |
 | functions       | You should place all of your project specific mixins in here. |
 | js-breakpoints  | Syncs up our CSS Media Queries to work with [MQ Sync](https://github.com/40Digits/jquery-mq-sync) |
 | media-queries   | Should not be edited as it contains the mixin necessary to make all of the media queries work. |
@@ -95,6 +95,89 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 | `@extend %naked-list;`   Sometimes you need a list without any formatting. Instead of resetting it on the base level, this is a much cleaner and safer approach to use when needed. |
 | `@extend %naked-button;`   | As with the list, this resets the <button> styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. |
 
+####layout/
+
+The [layout/](https://github.com/40Digits/forty-sass/tree/master/layout) folder contains styles which are specific to the layout or skeleton structure of your application. In this case think footer, header, navigations, sidebars, and wysiwyg styles.
+
+####modules/
+
+When you think [modules/](https://github.com/40Digits/forty-sass/tree/master/modules), it's not necessarily what you'd expect them to be. They're not modules from an Object Oriented Programming approach, instead think of modules as alittle extras that add to your application. Not every project will require a grid, nor will most project require keyframes. That being said, you are free to include these as you fit.
+
+####variables/
+
+The [modules/](https://github.com/40Digits/forty-sass/tree/master/variables) folder contains all your settings throughout the site. The most important file to take a look around would be the [settings.scs](https://github.com/40Digits/forty-sass/blob/master/variables/_settings.scss) and make any adjustment necessary for your application.
+
+The settings.scss file also houses your media query settings. In here you will be able to define additional media queries which should be necessary for your project. You are welcome to make adjustment to the breakpoints already defined, but we highly recommend against editing the small, medium, and large breakpoints.
+
+Our breakpoints are defined in a way that don't depend on devices specificity. Instead we see them scaling depending on the medium. This gives us room to define breakpoints that fit our application.
+
+Please note that we utilize mobile-first in all of our development.
+
+```css
+// Media query - min-width
+$mq-min-mini:       em(480);
+$mq-min-small:      em(600);
+$mq-min-medium:     em(768);
+$mq-min-large:      em(960);
+$mq-min-xlarge:     em(1220);
+$mq-min-xxlarge:    em(1440);
+
+// Media query - max-width
+$mq-max-tiny:       $mq-min-mini - em(1);
+$mq-max-mini:       $mq-min-small - em(1);
+$mq-max-small:      $mq-min-medium - em(1);
+$mq-max-medium:     $mq-min-large - em(1);
+$mq-max-large:      $mq-min-xlarge - em(1);
+$mq-max-xlarge:     $mq-min-xxlarge - em(1);
+
+$mq: (
+  'mini'            : ( min-width: $mq-min-mini ),
+  'small'           : ( min-width: $mq-min-small ),
+  'medium'          : ( min-width: $mq-min-medium ),
+  'large'           : ( min-width: $mq-min-large ),
+  'xlarge'          : ( min-width: $mq-min-xlarge ),
+  'xxlarge'         : ( min-width: $mq-min-xxlarge ),
+
+  'max-tiny'        : ( max-width: $mq-max-tiny ),
+  'max-mini'        : ( max-width: $mq-max-mini ),
+  'max-small'       : ( max-width: $mq-max-small ),
+  'max-medium'      : ( max-width: $mq-max-medium ),
+  'max-large'       : ( max-width: $mq-max-large ),
+  'max-xlarge'      : ( max-width: $mq-max-xlarge ),
+
+  'print'           : ( print ),
+  'tab-port'        : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-max-medium) and (orientation: portrait) ),
+  'tab-land'        : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape) )
+);
+```
+
+To use a media query:
+
+```css
+@include mq(medium) {
+  // styles that get added to a medium breakpoint
+}
+@include mq(large) {
+  // styles that get added to a large breakpoint
+}
+@include mq(max-medium) {
+  // styles that get added from large breakpoint down
+}
+
+// In this example, we are starting off with a red font color and a font-size of 10px.
+// Once we hit the medium breakpoint, the font-size changes to 15px/
+// When we view this style in print mode, the color is changed to black, but note that the color is red.
+.style {
+  color: red;
+  font-size: em(10);
+  @include mq(medium) {
+    font-size: em(15);
+  }
+  @include mq(print) {
+    color: #000;
+  }
+}
+```
 
 ***
 
