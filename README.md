@@ -60,7 +60,7 @@ sass/
 The [app/](https://github.com/40Digits/forty-sass/tree/master/app) folder contains all of your application styles. These styles vary anywhere from small partials to templates to pages. In order to keep consistency going, especially in Wordpress projects. Please use the following prefix method.
 
 | Prefix        | Usage                                                  |
-| ------------- | ------------------------------------------------------ |
+| :------------ | :----------------------------------------------------- |
 | page-         | pages                                                  |
 | temp-         | template specific files                                |
 | block-        | modular blocks that get re-used throughout application |
@@ -73,7 +73,7 @@ Your [global.scss](https://github.com/40Digits/forty-sass/blob/master/app/_globa
 The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folder generally contains tools which help with formatting of your application. They either give you ways to sync with javascript, give you functions, or help with resets. In most cases you won't be making many edits here, unless you are adding mixins and functions that are project specific. In that case, you would be making modifications to [functions.scss](https://github.com/40Digits/forty-sass/blob/master/helpers/_functions.scss) and [utilities.scss](https://github.com/40Digits/forty-sass/blob/master/helpers/_utilities.scss).
 
 | File            | Usage                                                  |
-| --------------- | ------------------------------------------------------ |
+| :-------------- | :----------------------------------------------------- |
 | fonts           | When using third-party fonts, it's recommended that you utilize the font mixin. For services such as typekit, you do not need to add in a @font-face. Where as for services such as fonts.com, which have an odd font-weight association, it's recommended you utilize an @font-face for best results. See file for usage examples. |
 | functions       | You should place all of your project specific mixins in here. |
 | js-breakpoints  | Syncs up our CSS Media Queries to work with [MQ Sync](https://github.com/40Digits/jquery-mq-sync) |
@@ -82,18 +82,18 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 
 ######utilities.scss
 
-| Sample Usage                      | Comments                                               |
-| :-------------------------------- | :----------------------------------------------------- |
-| @include font-smoothing;          | @include font-smoothing;  The body class comes with font-smoothing already applied. However, font-smoothing does not carry over to input fields and buttons. |
-| @include abs-center;              | Absolute center an element, this only works if there is a width and height on element. For other ways to center, read [Centering in CSS: A Complete Guide](http://css-tricks.com/centering-css-complete-guide/) |
-| @include placeholder {}           | Takes your @content and applies correct vendor prefixes for placeholder. See [forms.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_forms.scss) for usage example. |
-| @include keyframes(name) {}       | Takes your @content and applies correct vendor prefixes for animations. The prefixes inside specific keyframes are handles by auto-prfixer. See [keyframes.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_keyframes.scss) for usage example. |
-| @extend %visually-hidden;         | Hide an element from the screen, but still keep it for screen readers. Very handy and recommended instead of utilizing text-indent method. |
-| @include rgba(#000, .3);          | Gives you a cross browser alpha channel background color. Mostly used for IE8. |
-| @include opacity(.4);             | Gives you a cross browser opacity that works in IE8 |
-| @extend %bg-cover;                | Gives you background-size:cover support in IE8 |
-| @extend %naked-list;              | Sometimes you need a list without any formatting. Instead of resetting it on the base level, this is a much cleaner and safer approach to use when needed. |
-| @extend %naked-button;            | As with the list, this resets the <button> styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. |
+| Sample Usage                        | Comments                                               |
+| :---------------------------------- | :----------------------------------------------------- |
+| `@include font-smoothing;`          | The body class comes with font-smoothing already applied. However, font-smoothing does not carry over to input fields and buttons. |
+| `@include abs-center;`              | Absolute center an element, this only works if there is a width and height on element. For other ways to center, read [Centering in CSS: A Complete Guide](http://css-tricks.com/centering-css-complete-guide/) |
+| `@include placeholder {}`           | Takes your @content and applies correct vendor prefixes for placeholder. See [forms.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_forms.scss) for usage example. |
+| `@include keyframes(name) {}`       | Takes your @content and applies correct vendor prefixes for animations. The prefixes inside specific keyframes are handles by auto-prfixer. See [keyframes.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_keyframes.scss) for usage example. |
+| `@extend %visually-hidden;`         | Hide an element from the screen, but still keep it for screen readers. Very handy and recommended instead of utilizing text-indent method. |
+| `@include rgba(#000, .3);`          | Gives you a cross browser alpha channel background color. Mostly used for IE8. |
+| `@include opacity(.4);`             | Gives you a cross browser opacity that works in IE8 |
+| `@extend %bg-cover;`                | Gives you background-size:cover support in IE8 |
+| `@extend %naked-list;`              | Sometimes you need a list without any formatting. Instead of resetting it on the base level, this is a much cleaner and safer approach to use when needed. |
+| `@extend %naked-button;`            | As with the list, this resets the <button> styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. |
 
 
 ***
