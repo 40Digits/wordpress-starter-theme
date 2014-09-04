@@ -26,7 +26,7 @@ sass/
 |   |– utilities            # Utilities, %placeholders and %extends to dev faster & easier
 |
 |– layout/
-|   |– footer               # Stypes that apply to the footer of application
+|   |– footer               # Styles that apply to the footer of application
 |   |– header               # Styles that apply to the header of application
 |   |– nav                  # Styles that apply to the navigation of application
 |   |– sidebar              # Styles that apply to the sidebars of application
@@ -93,7 +93,7 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 | `@include opacity(.4);`   Gives you a cross browser opacity that works in IE8 |
 | `@extend %bg-cover;`   Gives you background-size:cover support in IE8 |
 | `@extend %naked-list;`   Sometimes you need a list without any formatting. Instead of resetting it on the base level, this is a much cleaner and safer approach to use when needed. |
-| `@extend %naked-button;`   | As with the list, this resets the <button> styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. |
+| `@extend %naked-button;`   | As with the list, this resets the `<button>` styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. |
 
 ####layout/
 
@@ -101,7 +101,7 @@ The [layout/](https://github.com/40Digits/forty-sass/tree/master/layout) folder 
 
 ####modules/
 
-When you think [modules/](https://github.com/40Digits/forty-sass/tree/master/modules), it's not necessarily what you'd expect them to be. They're not modules from an Object Oriented Programming approach, instead think of modules as alittle extras that add to your application. Not every project will require a grid, nor will most project require keyframes. That being said, you are free to include these as you fit.
+When you think [modules/](https://github.com/40Digits/forty-sass/tree/master/modules), it's not necessarily what you'd expect them to be. They're not modules from an Object Oriented Programming approach, instead think of modules as a little extras that add to your application. Not every project will require a grid, nor will most project require keyframes. That being said, you are free to include these as you fit.
 
 ####variables/
 
@@ -214,7 +214,7 @@ All [vendor/](https://github.com/40Digits/forty-sass/tree/master/vendor) specifi
 * Be generous with comments and as descriptive as possible.
 
 ####Properties
-* CSS rules should be comma seperated and reside on new lines.
+* CSS rules should be comma separated and reside on new lines.
 * Order of CSS properties:
   - Positioning
   - Display & Box Model
@@ -264,9 +264,9 @@ Component level name-spacing:
 * module-accordion
 
 ####Comments
-Use comments to seperate logical groups of styles within a document. This also allows us to convert from .scss <-> .sass without any hikcups. To get uniforminity with comments, please use the following three.
+Use comments to separate logical groups of styles within a document. This also allows us to convert from .scss <-> .sass without any hikcups. To get uniforminity with comments, please use the following three.
 
-* The top level of your sass file should contain the name in all uppercaps
+* The top level of your sass file should contain the name in all uppercase
 * Inside your sass file, divide sections up with a comment header
 * And for single properties, use //
 
@@ -279,5 +279,5 @@ Use comments to seperate logical groups of styles within a document. This also a
 // Section Comment Header
 //---------------------------------
 
-// Property commments
+// Property comments
 ```
