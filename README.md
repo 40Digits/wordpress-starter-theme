@@ -179,6 +179,23 @@ To use a media query:
 }
 ```
 
+To add a new media query breakpoint:
+
+```css
+// Inside $mq map, define any additional breakpoints after 'tab-land'.
+$mq: (
+  ...
+  'tab-land'        : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape) ),
+
+  'custom-mq'       : ( (min-width: 500px) and (max-width: 600px) )
+);
+```
+
+####vendor/
+
+All [vendor/](https://github.com/40Digits/forty-sass/tree/master/vendor) specific stylesheets should go into their own folder. The framework comes with a stripped down gravity-forms style guide for usage.
+
+
 ***
 
 ##**Styleguide**
