@@ -51,6 +51,8 @@ sass/
 `– style                    # primary Sass file
 ```
 
+***
+
 ##**Recommended Usage**
 
 ####app/
@@ -82,7 +84,8 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 
 | Sample Usage                      | Comments                                                 |
 | --------------------------------- | ------------------------------------------------------ |
-| @include font-smoothing;          | The body class comes with font-smoothing already applied. However, font-smoothing does not carry over to input fields and buttons. |
+| @include font-smoothing;
+The body class comes with font-smoothing already applied. However, font-smoothing does not carry over to input fields and buttons. |
 | @include abs-center;              | Absolute center an element, this only works if there is a width and height on element. For other ways to center, read [Centering in CSS: A Complete Guide](http://css-tricks.com/centering-css-complete-guide/) |
 | @include placeholder {}           | Takes your @content and applies correct vendor prefixes for placeholder. See [forms.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_forms.scss) for usage example. |
 | @include keyframes(name) {}       | Takes your @content and applies correct vendor prefixes for animations. The prefixes inside specific keyframes are handles by auto-prfixer. See [keyframes.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_keyframes.scss) for usage example. |
@@ -93,6 +96,8 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 | @extend %naked-list;              | Sometimes you need a list without any formatting. Instead of resetting it on the base level, this is a much cleaner and safer approach to use when needed. |
 | @extend %naked-button;            | As with the list, this resets the <button> styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. |
 
+
+***
 
 ##**Styleguide**
 
