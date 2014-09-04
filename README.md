@@ -52,7 +52,7 @@ sass/
 ```
 
 ***
-
+![alt text](http://i.imgur.com/nOLP3cd.png "Divider")
 ##**Recommended Usage**
 
 ####app/
@@ -84,7 +84,7 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 
 | Sample Usage                        | Comments                                               |
 | :---------------------------------- | :----------------------------------------------------- |
-| `@include font-smoothing;`          | The body class comes with font-smoothing already applied. However, font-smoothing does not carry over to input fields and buttons. |
+| ![alt text][logo] `@include font-smoothing;`          | The body class comes with font-smoothing already applied. However, font-smoothing does not carry over to input fields and buttons. |
 | `@include abs-center;`              | Absolute center an element, this only works if there is a width and height on element. For other ways to center, read [Centering in CSS: A Complete Guide](http://css-tricks.com/centering-css-complete-guide/) |
 | `@include placeholder {}`           | Takes your @content and applies correct vendor prefixes for placeholder. See [forms.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_forms.scss) for usage example. |
 | `@include keyframes(name) {}`       | Takes your @content and applies correct vendor prefixes for animations. The prefixes inside specific keyframes are handles by auto-prfixer. See [keyframes.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_keyframes.scss) for usage example. |
