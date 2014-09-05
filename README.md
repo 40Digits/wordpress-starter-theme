@@ -57,7 +57,7 @@ sass/
 
 ####app/
 
-The [app/](https://github.com/40Digits/forty-sass/tree/master/app) folder contains all of your application styles. These styles vary anywhere from small partials to templates to pages. In order to keep consistency going, especially in Wordpress projects. Please use the following prefix method.
+The [app/](https://github.com/40Digits/forty-sass/tree/master/app) folder contains all of your application styles. These styles vary anywhere from small partials to templates to pages. In order to keep consistency going, especially in Wordpress projects, please use the following prefix method:
 
 | Prefix        | Usage                                                  |
 | :------------ | :----------------------------------------------------- |
