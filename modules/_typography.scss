@@ -44,7 +44,6 @@ h3,
 h4,
 h5,
 h6 {
-	position: relative;
 	line-height: 1em;
 
 	a {
@@ -59,13 +58,13 @@ h6 {
 p,
 dl,
 address {
-	font-size: em(16);
+	font-size: $font-size-default;
 	line-height: em(20);
 }
 
 p,
 dl {
-	margin-bottom: 20px;
+	margin-bottom: em(20);
 }
 
 i,
@@ -85,17 +84,17 @@ strong {
 ul,
 ol,
 dd {
-	line-height: 1.5em;
+	line-height: em(20);
 }
 
 ul,
 ol {
-	margin-bottom: 20px;
+	margin-bottom: em(20);
 }
 
 li {
 	font-size: inherit;
-	line-height: 1.5em;
+	line-height: em(20);
 }
 
 //---------------------------------
@@ -103,6 +102,7 @@ li {
 //---------------------------------
 
 // This is handy if you're not using rems and want to control your own sizes on breakpoints
+// We recommend using REM sizing for this, but have provided several examples to help get you started
 
 %font-large {
 	font-size: em(28);

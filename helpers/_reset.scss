@@ -50,6 +50,7 @@ body {
 *,
 *:before,
 *:after {
+	position: relative;
 	box-sizing: inherit;
 
 	// Hide tap on touch devices.
