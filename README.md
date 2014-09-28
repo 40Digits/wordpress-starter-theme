@@ -39,6 +39,7 @@ sass/
 |   |   |– ...              # All your mixins go in here
 |   |   |– keyframes        # Cross-browser mixin to help out with animations
 |   |   |– placeholder      # Cross-browser mixin to help out with placeholders
+|   |   |– modernizr        # Mixin for modernizr feature testing
 |   |   |– responsive-grid  # Starter grid system to get you started
 |
 |– layout/
