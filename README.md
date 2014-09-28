@@ -40,7 +40,7 @@ sass/
 |   |   |– keyframes        # Cross-browser mixin to help out with animations
 |   |   |– placeholder      # Cross-browser mixin to help out with placeholders
 |   |   |– modernizr        # Mixin for modernizr feature testing
-|   |   |– z-index          # A tasty solution for managina all things z-index
+|   |   |– z-index          # A tasty solution for managing all things z-index related
 |   |   |– responsive-grid  # Starter grid system to get you started
 |
 |– layout/
