@@ -8,6 +8,11 @@ That being said, we do favor [SMACSS](http://smacss.com/) principles and methodo
 
 If you want to take the [BEM](http://bem.info/method/), [OOCSS](http://oocss.org/), or [SMACSS](http://smacss.com/) approach, the choice is yours. Do what works and feels best for you and your team.
 
+##**Requirements**
+
+* [Sass Globbing](https://rubygems.org/gems/sass-globbing) - While you don't have to use it, you can individually call sass files.
+* If you are using Grunt, look for [require](https://github.com/gruntjs/grunt-contrib-sass#require) under Grunt Contrib Sass, and makes sure to add it in.
+
 ##**Template Structure**
 ```
 sass/
@@ -111,7 +116,7 @@ The [app/](https://github.com/40Digits/forty-sass/tree/master/app) folder contai
 
 ####variables/
 
-The [modules/](https://github.com/40Digits/forty-sass/tree/master/variables) folder contains all your settings throughout the site. The most important file to take a look around would be the [settings.scs](https://github.com/40Digits/forty-sass/blob/master/variables/_settings.scss) and make any adjustment necessary for your application.
+The [variables/](https://github.com/40Digits/forty-sass/tree/master/variables) folder contains all your settings throughout the site. The most important file to take a look around would be the [settings.scs](https://github.com/40Digits/forty-sass/blob/master/variables/_settings.scss) and make any adjustment necessary for your application.
 
 The settings.scss file also houses your media query settings. In here you will be able to define additional media queries which should be necessary for your project. You are welcome to make adjustment to the breakpoints already defined, but we highly recommend against editing the small, medium, and large breakpoints.
 
