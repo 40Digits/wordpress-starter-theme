@@ -1,22 +1,25 @@
 {
-  "name": "Truman-Library",
-  "version": "0.1.0",
-  "devDependencies": {
-    "css-parse": "^1.5.3",
-    "grunt": "~0.4.5",
-    "grunt-autoprefixer": "^0.7.3",
-    "grunt-combine-media-queries": "^1.0.15",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-watch": "^0.6.1"
-  },
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "fortysass",
+  "title": "Forty Sass",
+  "description": "Sass starter framework.",
+  "version": "3.0.0",
+  "homepage": "http://www.40digits.com",
+  "author": {
+    "name": "40Digits",
+    "url": "http://www.40digits.com/"
   },
   "repository": {
     "type": "git",
-    "url": "https://besim@bitbucket.org/40digits/truman-library.git"
+    "url": "https://github.com/40Digits/forty-sass.git"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-clean": "~0.2.4",
+    "gulp-load-plugins": "~0.4.0",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-newer": "~0.3.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-shell": "~0.2.4"
+  }
 }

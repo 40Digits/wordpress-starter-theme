@@ -4,49 +4,55 @@ Simply put, there's no fancy magic behind the Forty Sass Framework Template. We'
 
 Our template exists to give you a light and base level toolkit to build off of. We're not here to tell you how to write or handle your project. After all, no two are the same.
 
-We're certainly versed and familiar with [OOCSS](http://oocss.org/) and [SMACSS](http://smacss.com/), and we have hints of that sprinkled throughout the template. So if you want to take the [BEM](http://bem.info/method/), [OOCSS](http://oocss.org/), or [SMACSS](http://smacss.com/) approach, the choice is yours.
+That being said, we do favor [SMACSS](http://smacss.com/) principles and methodology for re-usable and felxible modules, which are independent from individual page context.
 
-Do what works best for you and your team.
+If you want to take the [BEM](http://bem.info/method/), [OOCSS](http://oocss.org/), or [SMACSS](http://smacss.com/) approach, the choice is yours. Do what works and feels best for you and your team.
 
 ##**Template Structure**
 ```
 sass/
 |
-|– app/
-|   |- global               # Styles that apply globally on application
-|   |– ie                   # Styles specific to Internet Explorer
-|   ...                     # Application css
-|
-|– helpers/
-|   |– fonts                # Contains all your @imports, @font-face, and third-party fonts
-|   |– functions            # Application mixins & functions
-|   |– js-breakpoints       # Syncs up our CSS Media Queries to work with [MQ Sync](https://github.com/40Digits/jquery-mq-sync)
-|   |– media-queries        # Media query mixin
-|   |– reset                # Browser reset stylesheet
-|   |– utilities            # Utilities, %placeholders and %extends to dev faster & easier
-|
-|– layout/
-|   |– footer               # Styles that apply to the footer of application
-|   |– header               # Styles that apply to the header of application
-|   |– nav                  # Styles that apply to the navigation of application
-|   |– sidebar              # Styles that apply to the sidebars of application
-|   |– wysiwyg              # Styles that apply to wysiwyg content specific areas
-|
-|– modules/
-|   |– cms-wordpress        # Styles used within the Wordpress Wysiwyg editor
-|   |– forms                # Base styles for all form elements
-|   |– keyframes            # CSS keyframes for CSS animations
-|   |– print                # Print specific styles, although most will be inline with Sass
-|   |– responsive-grid      # Starter grid system to get you started
-|   |– typography           # Base styles for headings, paragraphs, lists, global styles, etc.
-|
 |- variables/
 |   |– color                # Color values used throughout the application
 |   |– settings             # Font variables, Media Query definitions
 |
+|– base/
+|   |– reset                # Reset styles
+|   |– print                # Print specific styles, although most will be inline with Sass
+|   |– typography           # Base styles for headings, paragraphs, lists, global styles, etc.
+|   |– forms                # Base styles for all form elements
+|   |– keyframes            # CSS keyframes for CSS animations
+|   |– cms-wordpress        # Styles used within the Wordpress Wysiwyg editor
+|
+|– helpers/
+|   |– media-queries        # Media query mixin
+|   |– js-breakpoints       # Syncs up our CSS Media Queries to work with [MQ Sync](https://github.com/40Digits/jquery-mq-sync)
+|   |– fonts                # Contains all your @imports, @font-face, and third-party fonts
+|   |– extends              # Contains all your %extends and %placeholders
+|   |– utilities            # Utilities to make to faster & easier
+|   |- mixins/
+|   |   |– ...              # All your mixins go in here
+|   |   |– keyframes        # Cross-browser mixin to help out with animations
+|   |   |– placeholder      # Cross-browser mixin to help out with placeholders
+|   |   |– responsive-grid  # Starter grid system to get you started
+|
+|– layout/
+|   |– main                 # Styles that apply to the main container of application
+|   |– header               # Styles that apply to the header of application
+|   |– footer               # Styles that apply to the footer of application
+|   |– nav                  # Styles that apply to the navigation of application
+|   |– sidebar              # Styles that apply to the sidebars of application
+|
 |- vendor/
+|   |– ...                  # Individual vendor css files should go in here
 |   |– gravity-forms        # Stripped down version for Gravity Forms
-|   ...                     # Vendor css
+|
+|– modules/
+|   |- ...                  # Individual modules that are re-usable throughout your application
+|   |– wysiwyg              # Styles that apply to wysiwyg content specific areas
+|
+|– app/
+|   |- ...                  # Styles that apply to templates of your application
 |
 `– style                    # primary Sass file
 ```
@@ -55,30 +61,22 @@ sass/
 
 ##**Recommended Usage**
 
-####app/
+####base/
 
-The [app/](https://github.com/40Digits/forty-sass/tree/master/app) folder contains all of your application styles. These styles vary anywhere from small partials to templates to pages. In order to keep consistency going, especially in Wordpress projects, please use the following prefix method:
-
-| Prefix        | Usage                                                  |
-| :------------ | :----------------------------------------------------- |
-| page-         | pages                                                  |
-| temp-         | template specific files                                |
-| block-        | modular blocks that get re-used throughout application |
-| cpt-          | anything that is a custom post type                    |
-
-Your [global.scss](https://github.com/40Digits/forty-sass/blob/master/app/_global.scss) file should contain any and all global layout styles that do not fit in a specific style-sheet. Any and all IE styles that can't be written inline, should reside inside the [ie.scss](https://github.com/40Digits/forty-sass/blob/master/app/_global.scss) style-sheet.
+In [base/](https://github.com/40Digits/forty-sass/tree/master/base) you'll find all your base styles: resets, typography, print, forms, etc.
 
 ####helpers/
 
-The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folder generally contains tools which help with formatting of your application. They either give you ways to sync with javascript, give you functions, or help with resets. In most cases you won't be making many edits here, unless you are adding mixins and functions that are project specific. In that case, you would be making modifications to [functions.scss](https://github.com/40Digits/forty-sass/blob/master/helpers/_functions.scss) and [utilities.scss](https://github.com/40Digits/forty-sass/blob/master/helpers/_utilities.scss).
+The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folder generally contains tools which help with formatting of your application. They either give you ways to sync with javascript, give you mixins, or utilities to [speed up dev process](https://github.com/40Digits/forty-sass/blob/master/helpers/_utilities.scss). In most cases you won't be making many edits here, unless you are adding mixins and functions that are project specific. In that case, you would be making modifications and adding mixins to [/helpers/mixins/](https://github.com/40Digits/forty-sass/blob/master/helpers/mixins/). Please keep each mixin in its own file or group them accordingly.
 
 | File            | Usage                                                  |
 | :-------------- | :----------------------------------------------------- |
 | fonts           | When using third-party fonts, it's recommended that you utilize the font mixin. For services such as typekit, you do not need to add in a @font-face. Where as for services such as fonts.com, which have an odd font-weight association, it's recommended you utilize an @font-face for best results. See file for usage examples. |
-| functions       | You should place all of your project specific mixins in here. |
 | js-breakpoints  | Syncs up our CSS Media Queries to work with [MQ Sync](https://github.com/40Digits/jquery-mq-sync) |
 | media-queries   | Should not be edited as it contains the mixin necessary to make all of the media queries work. |
-| utilities       | Contains helper classes which not only will speed up your development, but also make it faster and easier on you. |
+| extends         | Any and all %placeholders and %extends specific to your application should go in here. |
+| utilities       | Default helper functions to speed up your dev process. |
+| /mixins/        | You should place all of your project specific mixins in here. |
 
 ######utilities.scss
 
@@ -86,8 +84,6 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 | :--------------------------------------------------------------------------------------- |
 | `@include font-smoothing;`   The body class comes with font-smoothing already applied. However, font-smoothing does not carry over to input fields and buttons. |
 | `@include abs-center;`   Absolute center an element, this only works if there is a width and height on element. For other ways to center, read [Centering in CSS: A Complete Guide](http://css-tricks.com/centering-css-complete-guide/) |
-| `@include placeholder {}`   Takes your @content and applies correct vendor prefixes for placeholder. See [forms.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_forms.scss) for usage example. |
-| `@include keyframes(name) {}`   Takes your @content and applies correct vendor prefixes for animations. The prefixes inside specific keyframes are handles by auto-prfixer. See [keyframes.scss](https://github.com/40Digits/forty-sass/blob/master/modules/_keyframes.scss) for usage example. |
 | `@extend %visually-hidden;`   Hide an element from the screen, but still keep it for screen readers. Very handy and recommended instead of utilizing text-indent method. |
 | `@include rgba(#000, .3);`   Gives you a cross browser alpha channel background color. Mostly used for IE8. |
 | `@include opacity(.4);`   Gives you a cross browser opacity that works in IE8 |
@@ -97,11 +93,21 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 
 ####layout/
 
-The [layout/](https://github.com/40Digits/forty-sass/tree/master/layout) folder contains styles which are specific to the layout or skeleton structure of your application. In this case think footer, header, navigations, sidebars, and wysiwyg styles.
+The [layout/](https://github.com/40Digits/forty-sass/tree/master/layout) folder contains styles which are specific to the layout or skeleton structure of your application. In this case think footer, header, navigations, sidebars, and main content area.
 
 ####modules/
 
-When you think [modules/](https://github.com/40Digits/forty-sass/tree/master/modules), it's not necessarily what you'd expect them to be. They're not modules from an Object Oriented Programming approach, instead think of modules as a little extras that add to your application. Not every project will require a grid, nor will most project require keyframes. That being said, you are free to include these as you fit.
+If you're not familiar with [SMACSS](http://smacss.com/), please take some time to review. With SMACSS, we aim to identify repeating visual patterns. Some of those patterns could be: paginations, tabs, banners, hero areas, or even wysiwyg styles. By coding for visual patterns, we drive away from a single page mentality.  Every module should aim to be completely independent of its context and should work within any layout container.
+
+####app/
+
+The [app/](https://github.com/40Digits/forty-sass/tree/master/app) folder contains all of your application styles. These styles vary anywhere from templates to pages. In order to keep consistency going, especially in Wordpress projects, please use the following prefix method:
+
+| Prefix        | Usage                                                  |
+| :------------ | :----------------------------------------------------- |
+| page-         | pages                                                  |
+| temp-         | template specific files                                |
+| cpt-          | anything that is a custom post type                    |
 
 ####variables/
 

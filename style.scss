@@ -1,8 +1,8 @@
 //---------------------------------
-// Setup
+// Reset
 //---------------------------------
 
-@import "helpers/reset";
+@import "base/reset";
 
 //---------------------------------
 // Variables
@@ -19,49 +19,42 @@
 @import "helpers/js-breakpoints";
 @import "helpers/fonts";
 @import "helpers/utilities";
-@import "helpers/functions";
+@import "helpers/mixins/*";
+@import "helpers/extends";
 
 //---------------------------------
-// Modules
+// Base
 //---------------------------------
 
-// Default Modules
-@import "modules/print";
-@import "modules/typography";
-@import "modules/forms";
+// Default Base
+@import "base/print";
+@import "base/typography";
+@import "base/forms";
+@import "base/keyframes";
 
-// CMS
-@import "modules/cms-wordpress";
-
-// Optional Modules
-@import "modules/keyframes";
-@import "modules/responsive-grid";
+// CMS Related
+@import "base/cms-wordpress";
 
 //---------------------------------
 // Layout
 //---------------------------------
 
-@import "layout/header";
-@import "layout/nav";
-@import "layout/sidebar";
-@import "layout/footer";
-@import "layout/wysiwyg";
+@import "layout/*";
 
 //---------------------------------
 // Vendor
 //---------------------------------
 
-@import "vendor/fluidbox";
-@import "vendor/gravity-forms";
+@import "vendor/*";
+
+//---------------------------------
+// Modules
+//---------------------------------
+
+@import "modules/*";
 
 //---------------------------------
 // Application
 //---------------------------------
 
-@import "app/global";
-
-//---------------------------------
-// Browser Specific
-//---------------------------------
-
-@import "app/ie";
+@import "app/*";
