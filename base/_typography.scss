@@ -3,11 +3,20 @@
 //=================================
 
 //---------------------------------
+// Pseudo
+//---------------------------------
+
+::selection {
+	background: #777;
+	color: #fff;
+	text-shadow: none;
+}
+
+//---------------------------------
 // General
 //---------------------------------
 
 // If you want to use rem sizing, uncomment these and customize to your liking
-
 html {
 	font-size: $font-size-default;
 

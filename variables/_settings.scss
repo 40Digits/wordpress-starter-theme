@@ -74,3 +74,20 @@ $mq: (
 	'tab-port'			: ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-max-medium) and (orientation: portrait) ),
 	'tab-land'			: ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape) )
 );
+
+//---------------------------------
+// Z-Index
+//---------------------------------
+
+// http://www.sitepoint.com/better-solution-managing-z-index-sass/
+// http://viget.com/extend/sass-maps-and-z-indexes
+$z-layers: (
+	'pit'				: -1,
+	'default'			: 1,
+	'footer'			: 5,
+	'header'			: 10,
+	'nav'				: 20,
+	'announce'			: 30,
+	'modal'				: 40,
+	'overlay'			: 50
+);

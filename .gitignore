@@ -42,6 +42,7 @@ Thumbs.db
 ########
 .sass-cache
 *.css
+*.map
 config.rb
 sass-compile
 
