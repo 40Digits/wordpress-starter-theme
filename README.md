@@ -205,8 +205,7 @@ $mq: (
 );
 ```
 
-*Sublime Snippet*
-If you are using Sublime as your text editor, you can use the following snippet to make writing faster:
+_Sublime Snippet_  If you are using Sublime as your text editor, you can use the following snippet to make writing faster:
 
 ```<snippet>
   <content><![CDATA[
