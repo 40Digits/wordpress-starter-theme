@@ -97,7 +97,7 @@ The [helpers/](https://github.com/40Digits/forty-sass/tree/master/helpers) folde
 | `@include opacity(.4);`   Gives you a cross browser opacity that works in IE8 |
 | `@extend %bg-cover;`   Gives you background-size:cover support in IE8 |
 | `@extend %naked-list;`   Sometimes you need a list without any formatting. Instead of resetting it on the base level, this is a much cleaner and safer approach to use when needed. |
-| `@extend %naked-button;`   | As with the list, this resets the `<button>` styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. |
+| `@extend %naked-button;`   As with the list, this resets the `<button>` styles to bare bones. It's extremely handy for mobile devices as they tend to apply native UI styles. Looking at you iOS!|
 
 ####layout/
 
@@ -204,6 +204,21 @@ $mq: (
   'custom-mq'       : ( (min-width: 500px) and (max-width: 600px) )
 );
 ```
+
+*Sublime Snippet*
+If you are using Sublime as your text editor, you can use the following snippet to make writing faster:
+
+```<snippet>
+  <content><![CDATA[
+@include mq(${1}) {
+  ${2}
+}
+]]></content>
+  <tabTrigger>mq</tabTrigger>
+</snippet>
+```
+
+And if you are not sure how to add snippets to Sublime, [here's a quick guide for you](http://www.granneman.com/webdev/editors/sublime-text/top-features-of-sublime-text/quickly-insert-text-and-code-with-sublime-text-snippets/).
 
 ####vendor/
 
