@@ -205,10 +205,10 @@ $mq: (
 );
 ```
 
-**Sublime Snippet**
-If you are using Sublime as your text editor, you can use the following snippet to make writing faster:
+**Media Query - Sublime Snippet** - [Guide on adding snippets to Sublime](http://www.granneman.com/webdev/editors/sublime-text/top-features-of-sublime-text/quickly-insert-text-and-code-with-sublime-text-snippets/).
 
-```<snippet>
+```
+<snippet>
   <content><![CDATA[
 @include mq(${1}) {
   ${2}
@@ -217,8 +217,6 @@ If you are using Sublime as your text editor, you can use the following snippet 
   <tabTrigger>mq</tabTrigger>
 </snippet>
 ```
-
-And if you are not sure how to add snippets to Sublime, [here's a quick guide for you](http://www.granneman.com/webdev/editors/sublime-text/top-features-of-sublime-text/quickly-insert-text-and-code-with-sublime-text-snippets/).
 
 ####vendor/
 
