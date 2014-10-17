@@ -16,22 +16,14 @@
 // General
 //---------------------------------
 
-// If you want to use rem sizing, uncomment these and customize to your liking
 html {
-	font-size: $font-size-default;
-
-	// @include mq(medium) {
-	// 	font-size: $font-size-medium;
-	// }
-	// @include mq(large) {
-	// 	font-size: $font-size-large;
-	// }
+	font-size: 62.5%;
 }
 
 body {
 	background: #fff;
 	color: #000;
-	font-size: $font-size-default;
+	font-size: $body-font-size;
 	@include font-smoothing;
 }
 
@@ -67,13 +59,12 @@ h6 {
 p,
 dl,
 address {
-	font-size: $font-size-default;
-	line-height: em(20);
+	font-size: rem(16px);
 }
 
 p,
 dl {
-	margin-bottom: em(20);
+	margin-bottom: rem(20px);
 }
 
 i,
@@ -93,17 +84,17 @@ strong {
 ul,
 ol,
 dd {
-	line-height: em(20);
+	line-height: rem(20px);
 }
 
 ul,
 ol {
-	margin-bottom: em(20);
+	margin-bottom: rem(20px);
 }
 
 li {
 	font-size: inherit;
-	line-height: em(20);
+	line-height: rem(20px);
 }
 
 //---------------------------------
@@ -114,24 +105,24 @@ li {
 // We recommend using REM sizing for this, but have provided several examples to help get you started
 
 %font-large {
-	font-size: em(28);
+	font-size: em(28px);
 	@include mq(small) {
-		font-size: em(30);
+		font-size: em(30px);
 	}
 	@include mq(medium) {
-		font-size: em(36);
+		font-size: em(36px);
 	}
 	@include mq(large) {
-		font-size: em(46);
+		font-size: em(46px);
 	}
 }
 
 %font-medium {
-	font-size: em(18);
+	font-size: em(18px);
 	@include mq(medium) {
-		font-size: em(22);
+		font-size: em(22px);
 	}
 	@include mq(large) {
-		font-size: em(24);
+		font-size: em(24px);
 	}
 }

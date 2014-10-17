@@ -14,7 +14,7 @@
 // extra-spacing-bottom -> adds extra spacing after that element
 
 .gform_wrapper {
-	margin-top: em(40) !important;
+	margin-top: em(40px) !important;
 
 	@include mq(medium) {
 		margin: 0 auto;
@@ -26,7 +26,7 @@
 		margin-left: 0;
 
 		li {
-			font-size: em(14);
+			font-size: em(14px);
 			margin-bottom: 10px;
 			@include mq(medium) {
 				margin-bottom: 20px;
@@ -44,7 +44,7 @@
 		margin-bottom: 5px;
 		font-weight: 500;
 		color: #000;
-		font-size: em(14);
+		font-size: em(14px);
 	}
 
 	// submit buttons
@@ -56,7 +56,7 @@
 		padding: 6px 10px;
 		margin: 0;
 		@include font-smoothing;
-		font-size: em(13);
+		font-size: em(13px);
 		color: #fff;
 		line-height: 1.5em;
 
@@ -136,11 +136,11 @@
 	}
 
 	li.extra-spacing-top {
-		margin-top: em(40);
+		margin-top: em(40px);
 	}
 
 	li.extra-spacing-bottom {
-		margin-bottom: em(40);
+		margin-bottom: em(40px);
 	}
 
 	.gfield {
@@ -192,7 +192,7 @@
 	.list-indent {
 		.gfield_radio,
 		.gfield_checkbox {
-			margin-left: em(30);
+			margin-left: em(30px);
 			padding-left: 0;
 		}
 	}
@@ -205,7 +205,7 @@
 		@extend %cf;
 
 		label {
-			font-size: em(13);
+			font-size: em(13px);
 			margin: 4px 0 5px;
 			display: block;
 			color: #eee;
@@ -338,7 +338,7 @@
 		margin-bottom: 3em;
 		border-radius: 3px;
 		color: #fff;
-		font-size: em(14);
+		font-size: em(14px);
 		line-height: 1.5em;
 	}
 
