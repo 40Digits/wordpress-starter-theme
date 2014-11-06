@@ -73,16 +73,16 @@
 // Icon Font Placeholder
 %icon-font {
 	font-family: "icon-font" !important;
+	width: 1em;
+	margin: 0;
 	font-style: normal;
 	font-weight: normal;
-	speak: none;
-	text-decoration: inherit;
-	width: 1em;
-	margin: 0em;
-	text-align: center;
 	font-variant: normal;
+	text-align: center;
+	text-decoration: inherit;
 	text-transform: none;
 	line-height: 1em;
+	speak: none;
 }
 
 // Mixin to get icon-fonts going.
@@ -90,17 +90,6 @@
 // example usage: @include icon-font(icon-name);
 @mixin icon-font($icon: false) {
 	@extend %icon-font;
-	font-family: "icon-font" !important;
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-	text-decoration: inherit;
-	width: 1em;
-	margin: 0em;
-	text-align: center;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1em;
 
 	@if $icon == "icon-name" {
 		content: '\e800';
