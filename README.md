@@ -11,7 +11,9 @@ If you want to take the [BEM](http://bem.info/method/), [OOCSS](http://oocss.org
 ##**Requirements**
 
 * [Sass Globbing](https://rubygems.org/gems/sass-globbing) - While you don't have to use it, you can individually call sass files.
-* If you are using Grunt, look for [require](https://github.com/gruntjs/grunt-contrib-sass#require) under Grunt Contrib Sass, and makes sure to add it in.
+* If you are using Grunt, look for [require](https://github.com/gruntjs/grunt-contrib-sass#require) under Grunt Contrib Sass, and makes sure to add in the options.
+* If you are getting errors with Sass Globbing, remove current version of Sass Globbing and install [an updated release](http://rubygems.org/gems/sass-globbing-pr-20) which fixes realtive paths for Grunt
+* Ruby Sass is best at the moment since lib Sass is still lacking some @extend support.
 
 ##**Template Structure**
 ```
