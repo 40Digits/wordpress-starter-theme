@@ -18,12 +18,22 @@
 
 // Absolute center content
 @mixin abs-center {
-	margin: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin abs-center-vertical {
+	display: block;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin abs-center-horizontal {
+	display: block;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 // Visually hide elements while at the same time make them accessible on screen readers
