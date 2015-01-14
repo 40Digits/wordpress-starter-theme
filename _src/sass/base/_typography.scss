@@ -1,0 +1,114 @@
+//=================================
+// TYPOGRAPHY
+//=================================
+
+//---------------------------------
+// Pseudo
+//---------------------------------
+
+::selection {
+	background: #777;
+	color: #fff;
+	text-shadow: none;
+}
+
+//---------------------------------
+// General
+//---------------------------------
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+	position: relative;
+}
+
+body {
+	background: setcolor(maroon);
+	color: #fff;
+	@include setfont(montserrat, regular);
+	@include font-smoothing;
+	z-index: 1;
+	@include mq('medium') {
+		z-index: 2;
+	}
+	@include mq('large') {
+		z-index: 3;
+	}
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	transition: color 400ms $cubic;
+	&:hover,
+	&:focus,
+	&:active {
+		color: setcolor(grey);
+	}
+}
+
+//---------------------------------
+// Headlines
+//---------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1em;
+
+	a {
+		color: #000;
+	}
+}
+
+//---------------------------------
+// Text Components
+//---------------------------------
+
+p,
+dl,
+address {
+	font-weight: 400;
+	font-size: rem(13px);
+	line-height: rem(18px);
+}
+
+p,
+dl {
+	//margin-bottom: rem(20px);
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+//---------------------------------
+// List Style
+//---------------------------------
+
+ul,
+ol,
+dd {
+	//line-height: rem(20px);
+}
+
+ul,
+ol {
+	//margin-bottom: rem(20px);
+}
+
+li {
+	//font-size: inherit;
+	line-height: 1;
+}
+
+

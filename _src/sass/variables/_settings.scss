@@ -1,0 +1,156 @@
+//=================================
+// VARIABLES
+//=================================
+
+//---------------------------------
+// Root Font Sizing
+//---------------------------------
+
+// <html> and <body> font sizes
+$html-font-size:    62.5%;
+$body-font-size:    16px;
+
+// Multiplier for REM Mixin
+// It needs to stay the same size as <html> font size, but in pixels
+$base-font-size:    10px !default;
+
+// Whether to output fallback values in px when outputting rems.
+$rem-with-px-fallback:  false !default;
+
+
+//---------------------------------
+// Re-Usable EM & REM Functions
+//---------------------------------
+
+@function em($px-values, $font-size: $body-font-size) {
+  // Create an empty list that we can dump values into
+  $em-values: ();
+  @each $value in $px-values {
+    // Check to see if value is 0, auto, or inherited
+    // If so, do nothing and output value
+    @if $value == 0 or $value == auto or $value == inherit {
+      $em-values: append($em-values, $value);
+    // If the value is a pixel, convert to em value
+    } @else if unit($value) == 'px' {
+      $em-values: append($em-values, #{($value/$font-size)}em);
+    // For everything else, keep as is
+    } @else {
+      $em-values: append($em-values, $value);
+    }
+  }
+  @return $em-values;
+}
+
+@function rem($px-values, $font-size: $base-font-size) {
+  // Create an empty list that we can dump values into
+  $rem-values: ();
+  @each $value in $px-values {
+    // Check to see if value is 0, auto, or inherited
+    // If so, do nothing and output value
+    @if $value == 0 or $value == auto or $value == inherit {
+      $rem-values: append($rem-values, $value);
+    // If the value is a pixel, convert to em value
+    } @else if unit($value) == 'px' {
+      $rem-values: append($rem-values, #{($value/$font-size)}rem);
+    // For everything else, keep as is
+    } @else {
+      $rem-values: append($rem-values, $value);
+    }
+  }
+  @return $rem-values;
+}
+
+
+//---------------------------------
+// General
+//---------------------------------
+
+// Gutter
+$gutter:        em(10px);
+$gutter-large:      em(20px);
+
+// Rows Max-Width
+$max-width:       em(1020px);
+$max-width-small:     em(680px);
+$max-width-medium:    em(980px);
+$max-width-large:   em(1440px);
+
+// Animation
+$cubic:                 cubic-bezier(0.63, 0.64, 0.3, 1);
+$timing:        500ms;
+$timing-fast:     350ms;
+
+
+//---------------------------------
+// Media Query
+//---------------------------------
+
+// Media query - options
+$mq-tablet-landscape: em(1280px);
+
+// MQ Variables
+$mq-mini:           480px;
+$mq-small:          600px;
+$mq-medium:         768px;
+$mq-large:          960px;
+$mq-xlarge:         1200px;
+$mq-xxlarge:        1440px;
+$mq-xxxlarge:       1640px;
+
+// Media query - min-width
+$mq-min-mini:       em($mq-mini);
+$mq-min-small:      em($mq-small);
+$mq-min-medium:     em($mq-medium);
+$mq-min-large:      em($mq-large);
+$mq-min-xlarge:     em($mq-xlarge);
+$mq-min-xxlarge:    em($mq-xxlarge);
+$mq-min-xxxlarge:   em($mq-xxxlarge);
+
+// Media query - max-width
+$mq-max-tiny:       em($mq-mini - 1px);
+$mq-max-mini:       em($mq-small - 1px);
+$mq-max-small:      em($mq-medium - 1px);
+$mq-max-medium:     em($mq-large - 1px);
+$mq-max-large:      em($mq-xlarge - 1px);
+$mq-max-xlarge:     em($mq-xxlarge - 1px);
+$mq-max-xxlarge:    em($mq-xxxlarge - 1px);
+
+$mq: (
+  'mini'          : ( min-width: $mq-min-mini ),
+  'small'         : ( min-width: $mq-min-small ),
+  'medium'        : ( min-width: $mq-min-medium ),
+  'large'         : ( min-width: $mq-min-large ),
+  'xlarge'        : ( min-width: $mq-min-xlarge ),
+  'xxlarge'       : ( min-width: $mq-min-xxlarge ),
+  'xxxlarge'      : ( min-width: $mq-min-xxxlarge ),
+
+  'max-tiny'      : ( max-width: $mq-max-tiny ),
+  'max-mini'      : ( max-width: $mq-max-mini ),
+  'max-small'     : ( max-width: $mq-max-small ),
+  'max-medium'    : ( max-width: $mq-max-medium ),
+  'max-large'     : ( max-width: $mq-max-large ),
+  'max-xlarge'    : ( max-width: $mq-max-xlarge ),
+  'max-xxlarge'   : ( max-width: $mq-max-xxlarge ),
+
+  'print'         : ( print ),
+  'tab-port'      : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-max-medium) and (orientation: portrait) ),
+  'tab-land'      : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape) )
+);
+
+
+//---------------------------------
+// Z-Index
+//---------------------------------
+
+// http://www.sitepoint.com/better-solution-managing-z-index-sass/
+// http://viget.com/extend/sass-maps-and-z-indexes
+$z-layers: (
+  'pit'       : -1,
+  'default'     : 1,
+  'footer'      : 5,
+  'header'      : 10,
+  'nav'       : 20,
+  'announce'      : 30,
+  'modal'       : 40,
+  'overlay'     : 50
+);

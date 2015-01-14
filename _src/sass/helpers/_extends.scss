@@ -1,0 +1,27 @@
+//=================================
+// EXTENDS & PLACEHOLDERS
+//=================================
+
+// Headline
+
+%headline-small {
+	font-weight: 700;
+	line-height: rem(20px);
+	text-transform: uppercase;
+	color: setcolor(grey);
+	margin-bottom: rem(10px);
+	letter-spacing: .05em;
+	text-align: center;
+}
+
+%paragraph-large {
+	color: #fff;
+	font-size: rem(14px);
+	line-height: rem(18px);
+	margin-bottom: rem(15px);
+	text-align: center;
+	@include mq('medium') {
+		font-size: rem(23px);
+		line-height: rem(29px);
+	}
+}

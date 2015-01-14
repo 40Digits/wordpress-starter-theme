@@ -1,0 +1,105 @@
+//=================================
+// FONTS
+//=================================
+
+//---------------------------------
+// @font-face & @import
+//---------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Marvel:400,700,700italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+//---------------------------------
+// Font Mixin
+//---------------------------------
+
+// Font family names
+$font-marvel: 'Marvel', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+// Setting up a Sass Map
+// $fonts: (
+//   gibson: (
+//     regular: $body-font-regular,
+//     light: $body-font-light,
+//     bold: $body-font-bold
+//   ),
+//   helvetica: (
+//     regular: $body-font-regular,
+//     light: $body-font-light,
+//     bold: $body-font-bold
+//   ),
+// );
+
+// Font list
+$fonts: (
+  family: (
+    marvel: $font-marvel,
+    montserrat: $font-montserrat
+  ),
+  weight: (
+    regular: 400,
+    bold: 700,
+    r : 400,
+    b : 700
+  ),
+);
+
+// Setting up a function to pull values from a map easier.
+// @function setfont($font_name, $font_weight: regular) {
+//   @return map-get(map-get($fonts, $font_name), $font_weight);
+// }
+
+@mixin setfont($font_name, $font_weight: regular) {
+  font-family: map-get(map-get($fonts, family), $font_name);
+  font-weight: map-get(map-get($fonts, weight), $font_weight);
+}
+
+
+//----------------------------------
+// Icon Fonts
+//----------------------------------
+
+@font-face {
+	font-family: 'icon-font';
+	src: url('assets/fonts/icon-font/icon-font.eot');
+	src: url('assets/fonts/icon-font/icon-font.eot#iefix') format('embedded-opentype'),
+		 url('assets/fonts/icon-font/icon-font.woff') format('woff'),
+		 url('assets/fonts/icon-font/icon-font.ttf') format('truetype'),
+		 url('assets/fonts/icon-font/icon-font.svg#icon-font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Icon Font Placeholder
+%icon-font {
+	font-family: "icon-font" !important;
+	width: 1em;
+	margin: 0;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	line-height: 1em;
+	speak: none;
+}
+
+// Mixin to get icon-fonts going.
+// DO NOT APPLY STYLES TO MIXIN - ACTS AS A RESET
+// example usage: @include icon-font(icon-name);
+@mixin icon-font($icon: false) {
+	@extend %icon-font;
+
+	@if $icon == "icon-name" {
+		content: '\e800';
+	}
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	@include icon-font();
+}
+
+// Icon Font Glyph Code
+.icon-example:before { content: '\e800'; }
