@@ -1,10 +1,10 @@
 var gulp         = require('gulp'),
-		livereload   = require('gulp-livereload'),
-		sass         = require('gulp-ruby-sass'),
-		sourcemaps   = require('gulp-sourcemaps'),
-		handleErrors = require('../util/handleErrors'),
-		config       = require('../config').sass,
-		autoprefixer = require('gulp-autoprefixer');
+    livereload   = require('gulp-livereload'),
+    sass         = require('gulp-ruby-sass'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    handleErrors = require('../util/handleErrors'),
+    config       = require('../config').sass,
+    autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
   return gulp.src(config.src)

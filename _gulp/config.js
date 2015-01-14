@@ -1,4 +1,4 @@
-var dest        = './_dist/assets',
+var dest        = './assets',
     src         = './_src';
 
 var paths = {
@@ -11,7 +11,9 @@ var paths = {
 module.exports = {
   sass: {
     src: paths.styles,
-    dest: dest + '/css',
+    // For non Wordpress installs, change dest to
+    // dest: dest + '/css',
+    dest: './',
     settings: {
       "sourcemap=none": true,
       style: 'nested',

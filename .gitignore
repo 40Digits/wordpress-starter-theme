@@ -1,3 +1,6 @@
 .sass-cache
 _dist
+assets
+style.css
+style-cpt.css
 node_modules
