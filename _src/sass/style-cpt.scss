@@ -1,0 +1,36 @@
+//=================================
+// CUSTOM WORDPRESS ADMIN ICONS
+//=================================
+
+// You can add custom CPT icons by using an icon font. In this example, we are pulling the fontello icon font and attaching our custom icons.
+
+@import "helpers/fonts";
+
+// get rid of spacing
+div.wp-menu-image:before {margin: 0 !important;}
+
+// here are some examples, we are targeting our custom cpt and replacing the image holder with our custom icon
+#adminmenu .menu-icon-post {
+	&#menu-posts-individual_spotlight .wp-menu-image:before {
+		@include icon-font(flashlight);
+	}
+	&#menu-posts-partner_spotlight .wp-menu-image:before {
+		@include icon-font(flow);
+	}
+	&#menu-posts-hope_report .wp-menu-image:before {
+		@include icon-font(globe);
+		font-weight: bold !important;
+	}
+}
+
+
+//=================================
+// ADMIN MENU SEPERATOR
+//=================================
+
+#adminmenu li.wp-menu-separator {
+	background: #444;
+	border-color: rgba(255, 255, 255, 0.1);
+	height: 5px;
+	margin: 6px 0;
+}

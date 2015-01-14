@@ -1,0 +1,52 @@
+{
+  "name": "forty-eta-build-script",
+  "title": "40D Eta Build Script",
+  "description": "Gulp build script used for internal 40Digits projects.",
+  "version": "1.0.0",
+  "homepage": "http://www.40digits.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/40Digits/eta.git"
+  },
+  "browser": {
+    "plugin": "./src/javascript/vendor/jquery-plugin.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
+  "devDependencies": {
+    "browserify": "^8.0.2",
+    "browserify-shim": "^3.8.2",
+    "css-sprite": "^0.7.0-beta3",
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-changed": "^0.4.1",
+    "gulp-if": "0.0.5",
+    "gulp-filesize": "0.0.6",
+    "gulp-imagemin": "^0.6.2",
+    "gulp-livereload": "~1.2.0",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-notify": "^1.4.2",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-uglify": "^1.0.2",
+    "gulp-util": "^3.0.0",
+    "lodash": "^2.4.1",
+    "pretty-hrtime": "~0.2.1",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "~0.1.1",
+    "watchify": "^2.2.1"
+  },
+  "dependencies": {
+  }
+}
