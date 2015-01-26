@@ -1,0 +1,394 @@
+//=================================
+// GRAVITY FORMS
+//=================================
+
+// These are styles used for if you do not use any gravity forms css.
+// Bellow you will find a list of custom classes used
+// --------------------------------------------------
+// hidden-label -> hides the first level label
+// hidden -> hides the whole item
+// list-spacing -> adds extra spacing between list items (radio and checkbox)
+// list-indent -> indents the list in (radio and checkbox)
+// side-label -> moves the first level label to the side
+// extra-spacing-top -> adds extra spacing above that element
+// extra-spacing-bottom -> adds extra spacing after that element
+
+.gform_wrapper {
+	margin-top: em(40px) !important;
+
+	@include mq(medium) {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	ul {
+		@extend %naked-list;
+		margin-left: 0;
+
+		li {
+			font-size: em(14px);
+			margin-bottom: 10px;
+			@include mq(medium) {
+				margin-bottom: 20px;
+			}
+		}
+
+	}
+
+	form {
+		position: relative;
+	}
+
+	label {
+		display: inline-block;
+		margin-bottom: 5px;
+		font-weight: 500;
+		color: #000;
+		font-size: em(14px);
+	}
+
+	// submit buttons
+	input[type="submit"] {
+		@extend %naked-button;
+		display: inline-block;
+		width: auto;
+		background: #333;
+		padding: 6px 10px;
+		margin: 0;
+		@include font-smoothing;
+		font-size: em(13px);
+		color: #fff;
+		line-height: 1.5em;
+
+		&:hover {
+			background-color: #555
+		}
+	}
+
+	//---------------------------------
+	// Section Divider
+	//---------------------------------
+
+	.gfield.gsection {
+		margin: 2em 0 1em;
+		padding-bottom: .5em;
+		border-bottom: 1px solid grey;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			font-size: 20px;
+			font-weight: 800;
+			text-align: left;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.gform_heading {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			padding-left: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	label .gfield_required {
+		color: red;
+		padding-left: 5px;
+	}
+
+	//---------------------------------
+	// Specific Styles
+	//---------------------------------
+
+	li.hidden {
+		display: none !important;
+	}
+
+	input.medium {
+		width: 100%;
+		@include mq(mini) {
+			width: 50%;
+		}
+	}
+
+	input.small {
+		width: 50%;
+		@include mq(mini) {
+			width: 25%;
+		}
+	}
+
+	li.auto-width {
+		input, select, textarea {
+			width: auto;
+		}
+	}
+
+	li.hidden-label > label {
+		display: none;
+	}
+
+	li.extra-spacing-top {
+		margin-top: em(40px);
+	}
+
+	li.extra-spacing-bottom {
+		margin-bottom: em(40px);
+	}
+
+	.gfield {
+		clear: both;
+	}
+
+	//---------------------------------
+	// Radio + Checkbox
+	//---------------------------------
+
+	.gfield_radio,
+	.gfield_checkbox {
+		margin-bottom: 20px;
+
+		li {
+			margin-bottom: 5px;
+			padding-left: 25px;
+			position: relative;
+
+			label {
+				font-weight: 400;
+				line-height: 18px;
+				position: relative;
+				top: 3px;
+			}
+
+			input {
+				position: absolute;
+				top: 8px;
+				left: 0;
+				width: auto;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	// adds extra spacing between the lines
+	.list-spacing {
+		.gfield_radio,
+		.gfield_checkbox {
+
+			li {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	// indents the lists
+	.list-indent {
+		.gfield_radio,
+		.gfield_checkbox {
+			margin-left: em(30px);
+			padding-left: 0;
+		}
+	}
+
+	//---------------------------------
+	// Complex Fields
+	//---------------------------------
+
+	.ginput_complex {
+		@extend %cf;
+
+		label {
+			font-size: em(13px);
+			margin: 4px 0 5px;
+			display: block;
+			color: #eee;
+		}
+
+		.ginput_full {
+			@extend %cf;
+		}
+
+		.ginput_left {
+			@include mq(medium) {
+				width: 50%;
+				float: left;
+			}
+		}
+
+		.ginput_right {
+			@include mq(medium) {
+				width: 50%;
+				float: right;
+				padding-left: 20px;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Half
+	//---------------------------------
+
+	li.gfield.gf_right_half,
+	li.gfield.gf_left_half {
+		@include mq(small) {
+			width: 50%;
+		}
+	}
+
+	li.gfield.gf_left_half {
+		@include mq(small) {
+			float: left;
+			clear: left !important;
+			padding-right: 15px;
+		}
+	}
+
+	li.gfield.gf_right_half {
+		@include mq(small) {
+			float: right;
+			clear: right !important;
+			padding-left: 15px;
+		}
+	}
+
+	//---------------------------------
+	// Thirds
+	//---------------------------------
+
+	li.gfield.gf_left_third,
+	li.gfield.gf_middle_third,
+	li.gfield.gf_right_third {
+		@include mq(small) {
+			width: 50%;
+		}
+		@include mq(small) {
+			width: 33.33%;
+		}
+	}
+
+	li.gfield.gf_left_third {
+		@include mq(small) {
+			float: left;
+			clear: left !important;
+		}
+	}
+
+	li.gfield.gf_middle_third {
+		@include mq(small) {
+			float: left;
+			padding-left: 2%;
+			padding-right: 2%;
+			clear: none !important;
+		}
+	}
+
+	li.gfield.gf_right_third {
+		@include mq(small) {
+			float: right;
+			clear: right !important;
+		}
+	}
+
+	//---------------------------------
+	// Date Dropdown
+	//---------------------------------
+
+	.gfield_date_dropdown_month,
+	.gfield_date_dropdown_day,
+	.gfield_date_dropdown_year {
+		margin-right: 6px;
+		vertical-align: top;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+	}
+
+	//---------------------------------
+	// Errors
+	//---------------------------------
+
+	// make all the inputs have a red border
+	.gfield_error {
+		input,
+		textarea {
+			border-color: red;
+			background-color: rgba(red, .75);
+			color: #fff;
+		}
+
+		.gfield_radio,
+		.gfield_checkbox {
+			label {
+				color: red;
+			}
+		}
+	}
+
+	// couldn't validate the form because of errors
+	.validation_error {
+		background: red;
+		padding: 15px 20px;
+		margin-bottom: 3em;
+		border-radius: 3px;
+		color: #fff;
+		font-size: em(14px);
+		line-height: 1.5em;
+	}
+
+	// message underneath the inputs
+	.validation_message {
+		padding: 5px 0;
+		color: #DD3F3F;
+		display: none;
+	}
+
+	.instruction {
+		font-size: 12px
+	}
+
+
+	//---------------------------------
+	// Project Specific
+	//---------------------------------
+
+	// add css that applies only to your project
+	li.custom-class {
+
+	}
+}
+
+//---------------------------------
+// Validation
+//---------------------------------
+
+.gform_validation_container {
+	display: none;
+}
+
+.gform_confirmation_wrapper {
+	background: red;
+	margin: 2em 0;
+	padding: 20px 0;
+	border-radius: 2px;
+	font-size: 17px;
+	color: #FFF;
+}
+
+.gform_confirmation_message {
+	font-size: .8em;
+	line-height: 1.75em;
+	padding: 0 20px;
+}
+
+.gfield_description {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.1em;
+}

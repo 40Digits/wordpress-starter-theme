@@ -1,0 +1,72 @@
+//=================================
+// RESPONSIVE GRID
+//=================================
+
+// This exists as a basic structure, we recommend you keep your columns dry and modular and only use this if necessary
+// For rows use @include row(size);
+
+//---------------------------------
+// Mixin
+//---------------------------------
+
+@mixin col($width, $float: false) {
+	width: $width;
+	@if $float {
+		float: $float;
+	}
+}
+
+//---------------------------------
+// Variables
+//---------------------------------
+
+// Magic Gridlyness @ 2-col
+$one-two: 50%;
+
+// Magic Gridlyness @ 3-col
+$one-three: 33.33334%;
+$two-three: 66.66668%;
+
+// Magic Gridlyness @ 4-col
+$one-four: 25%;
+$two-four: 50%;
+$three-four: 75%;
+
+// Magic Gridlyness @ 8-col
+$one-eight: 12.5%;
+$two-eight: 25%;
+$three-eight: 37.5%;
+$four-eight: 50%;
+$five-eight: 62.5%;
+$six-eight: 75%;
+$seven-eight: 87.5%;
+
+// Magic Gridlyness @ 12-col
+$one-twelve: 8.33333%;
+$two-twelve: 16.66667%;
+$three-twelve: 25%;
+$four-twelve: 33.33333%;
+$five-twelve: 41.66667%;
+$six-twelve: 50%;
+$seven-twelve: 58.33333%;
+$eight-twelve: 66.66667%;
+$nine-twelve: 75%;
+$ten-twelve: 83.33333%;
+$eleven-twelve: 91.66667%;
+
+// Magic Gridlyness @ 16-col
+$one-sixteen: 6.25%;
+$two-sixteen: 12.5%;
+$three-sixteen: 18.75%;
+$four-sixteen: 25%;
+$five-sixteen: 31.25%;
+$six-sixteen: 37.5%;
+$seven-sixteen: 43.75%;
+$eight-sixteen: 50%;
+$nine-sixteen: 56.25%;
+$ten-sixteen: 62.5%;
+$eleven-sixteen: 68.75%;
+$twelve-sixteen: 75%;
+$thirteen-sixteen: 81.25%;
+$fourteen-sixteen: 87.5%;
+$fifteen-sixteen: 93.75%;
