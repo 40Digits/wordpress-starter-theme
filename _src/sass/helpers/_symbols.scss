@@ -48,10 +48,10 @@
 @mixin symbols($symbol: false) {
   @extend %symbols;
 
-  @if $symbol == "symbol-test" {
+  @if $symbol == "symbol-icon" {
     content: '\E001';
   }
 }
 
 // Individual CSS styles for when you call by the class name in markup.
-.s-symbol-test:before { content: "\E001" }
+.s-symbol-icon:before { content: "\E001" }

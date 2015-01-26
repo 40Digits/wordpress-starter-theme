@@ -1,7 +1,7 @@
 var gulp       = require('gulp'),
     watch      = require('../util/watch'),
     config     = require('../config'),
-    gulpStart  = require('../util/gulpstart')
+    gulpStart  = require('../util/gulpstart'),
     livereload = require('gulp-livereload');
 
 gulp.task('watch', ['watchify'], function () {
@@ -18,7 +18,7 @@ gulp.task('watch', ['watchify'], function () {
       when: 'symbols/*.+(svg)',
       then: gulpStart('symbols')
     }, {
-      when: 'images/**/*.+(png|jpg|svg|gif)',
+      when: 'images/**/*.+(png|jpg|jpeg|svg|gif)',
       then: gulpStart('images')
     }, {
       when: 'sprites/**/*.+(png)',
