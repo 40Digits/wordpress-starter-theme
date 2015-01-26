@@ -1,19 +1,47 @@
-var dest        = './assets',
-    src         = './_src';
+// Paths
+var assetsDir = './assets',
+    sourceDir = './_src',
+    appDir  = './';
 
-var paths = {
-      images:   src + '/images/**/*',
-      scripts:  src + '/js/**/*.js',
-      sprites:  src + '/sprites/*.png',
-      styles:   src + '/sass/**/*.{sass,scss}'
-    };
+// Source Directory
+var _source = {
+  root:     sourceDir,
+  images:   sourceDir + '/images/**/*',
+  scripts:  sourceDir + '/js/',
+  sprites:  sourceDir + '/sprites/*.png',
+  styles:   sourceDir + '/sass/**/*.{sass,scss}',
+  symbols:  sourceDir + '/symbols/*.svg',
+  tpl:      sourceDir + '/tpl/'
+};
 
+// Assets Directory
+var _assets = {
+  root:     assetsDir,
+  images:   assetsDir + '/images/',
+  scripts:  assetsDir + '/js/',
+  sprites:  assetsDir + '/images/sprites/',
+  styles:   assetsDir + '/css/',
+  symbols:  assetsDir + '/fonts/symbols/'
+}
+
+// What sort of pre-processor are we utilizing?
+var _processor = {
+  format: 'scss'
+};
+
+// Gulp options/settings for tasks.
 module.exports = {
+  browserify: {
+    debug: true,
+    bundleConfigs: [{
+      entries: _source.scripts + 'main.js',
+      dest: _assets.scripts,
+      outputName: 'main.js'
+    }]
+  },
   sass: {
-    src: paths.styles,
-    // For non Wordpress installs, change dest to
-    // dest: dest + '/css',
-    dest: './',
+    src: _source.styles,
+    dest: appDir,
     settings: {
       "sourcemap=none": true,
       style: 'nested',
@@ -22,36 +50,60 @@ module.exports = {
       trace: true
     }
   },
-  sprite: {
-    src: paths.sprites,
-    dest_img: dest + '/images/sprites',
-    dest_sass: src + '/sass/helpers',
+  autoprefixer: {
+    browsers: [
+      'last 2 versions',
+      'safari 5',
+      'ie 8',
+      'ie 9',
+      'android 4'
+    ],
+    cascade: true
+  },
+  sprites: {
+    src: _source.sprites,
+    destSprites: _assets.sprites,
+    destSass: _source.root + '/sass/helpers',
     settings: {
-      name: 'sprite.png',
       retina: true,
-      style: '_sprites.scss',
-      cssPath: '../images/sprites',
-      processor: 'scss',
+      style: '_sprites.' + _processor.format,
+      cssPath: _assets.sprites,
+      processor: _processor.format,
+      orientation: 'binary-tree',
       prefix: 'sprite'
     }
   },
-  images: {
-    src: paths.images,
-    dest: dest + '/images'
+  symbols: {
+    src: _source.symbols,
+    tplCss: _source.tpl + 'symbols.tpl.css',
+    tplSass: _source.tpl + 'symbols.tpl.' + _processor.format,
+    tplHtml: _source.tpl + 'symbols.tpl.html',
+    destFont: _assets.symbols,
+    destSass: _source.root + '/sass/helpers',
+    settings: {
+      fontName: 'Symbols',
+      appendCodepoints: false,
+      centerHorizontally: true,
+      normalize: true,
+      fontHeight: false
+    },
+    renameSass: {
+      basename: '_symbols',
+      extname: '.' + _processor.format
+    }
   },
-  browserify: {
-    // A separate bundle will be generated for each
-    // bundle config in the list below
-    bundleConfigs: [{
-      entries: paths.scripts,
-      dest: dest + '/js',
-      outputName: 'main.js',
-      require: ['jquery']
-    }]
+  images: {
+    src: _source.images,
+    dest: _assets.images
+  },
+  watch: {
+    src: _source.root,
+    dest: _assets.root,
   },
   production: {
-    cssSrc: dest + '/*.css',
-    jsSrc: dest + '/*.js',
-    dest: dest
+    cssSrc: appDir + '*.css',
+    cssDest: appDir,
+    jsSrc: _assets.scripts + '*.js',
+    jsDest: _assets.scripts
   }
 };

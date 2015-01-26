@@ -1,19 +1,28 @@
-/* Notes:
-   - gulp/tasks/browserify.js handles js recompiling with watchify
-   - gulp/tasks/browserSync.js watches and reloads compiled files
-*/
+var gulp       = require('gulp'),
+    watch      = require('../util/watch'),
+    config     = require('../config'),
+    gulpStart  = require('../util/gulpstart'),
+    livereload = require('gulp-livereload');
 
-var gulp        = require('gulp'),
-    config      = require('../config'),
-    watchify    = require('./browserify'),
-    livereload  = require('gulp-livereload');
-
-
-// Watchify will watch and recompile our JS, so no need to gulp.watch it
-// gulp.task('watch', ['watchify','browserSync'], function(callback) {
-gulp.task('watch', function(callback) {
-  var server = livereload();
-  gulp.watch(config.sass.src,   ['sass']);
-  gulp.watch(config.images.src, ['images']);
-  gulp.watch(config.sprite.src, ['sprites']);
+gulp.task('watch', ['watchify'], function () {
+  livereload();
+  watch({
+    root: config.watch.src,
+    match: [{
+      when: 'js/**',
+      then: gulpStart('js')
+    }, {
+      when: 'sass/**/*.+(sass|scss)',
+      then: gulpStart('sass')
+    }, {
+      when: 'symbols/*.+(svg)',
+      then: gulpStart('symbols')
+    }, {
+      when: 'images/**/*.+(png|jpg|jpeg|svg|gif)',
+      then: gulpStart('images')
+    }, {
+      when: 'sprites/**/*.+(png)',
+      then: gulpStart('sprites')
+    }]
+  });
 });
