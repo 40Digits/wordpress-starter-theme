@@ -6,3 +6,10 @@
 //---------------------------------
 // Section Comment Header
 //---------------------------------
+
+@include mq('large') {
+  .test-class {
+    color: red;
+    transform: translateX(100%);
+  }
+}

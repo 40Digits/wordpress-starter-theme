@@ -1,5 +1,5 @@
 var gulp         = require('gulp'),
-    sass         = require('gulp-ruby-sass'),
+    sass         = require('gulp-sass'),
     sourcemaps   = require('gulp-sourcemaps'),
     gulpFilter   = require('gulp-filter'),
     handleErrors = require('../util/handleErrors'),
@@ -13,7 +13,7 @@ gulp.task('sass', function () {
     .pipe(sass(config.sass.settings))
     .on('error', handleErrors)
     .pipe(sourcemaps.write())
-    .pipe(autoprefixer({ browsers: ['last 2 version'] }))
+    .pipe(autoprefixer(config.autoprefixer))
     .pipe(gulp.dest(config.sass.dest))
     .pipe(livereload());
 });
