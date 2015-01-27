@@ -38,7 +38,26 @@ This will run the `default` gulp task defined in `_gulp/tasks/default.js`, which
 - `sprites` task compiles sprite assets into a sprite sheet, and generates a sass file for mixins & variable use.
 - `watch` tasks looks out for changes, and when a file is added, removes, or edited, it runs necessary task.
 
-#### gulp production
+##### gulp browserify
+Running `gulp browserify` will start a bundling process for each of your bundles defined in `_gulp/config.js` under browserify. 
+
+```
+bundleConfigs: [{
+  entries: [],
+  dest: _assets.scripts,
+  outputName: 'bundleOne.js',
+  sourceJS: _source.scripts + 'bundleOne.js',
+  configJS: _source.scripts + 'config/configBundleOne.js'
+},{
+  entries: [],
+  dest: _assets.scripts,
+  outputName: 'bundleTwo.js',
+  sourceJS: _source.scripts + 'bundleTwo.js',
+  configJS: _source.scripts + 'config/configBundleTwo.js'
+}],
+```
+
+##### gulp production
 
 There is also a `production` task you can run with `gulp production`, which will re-build optimized, compressed css and js files to the assets folder, as well as output their file sizes to the console. It's a shortcut for running the following tasks: `['minifyCss', 'uglifyJs']`.
 
