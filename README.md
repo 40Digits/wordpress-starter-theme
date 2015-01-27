@@ -9,7 +9,6 @@ It was modified to work within the needs and requirements of 40Digits developmen
 Includes the following tools, tasks, and workflows:
 
 - [Browserify](http://browserify.org/) (with [browserify-shim](https://github.com/thlorenz/browserify-shim))
-- [Watchify](https://github.com/substack/watchify) (caching version of browserify for super fast rebuilds)
 - [SASS](http://sass-lang.com/) (libsass with [source maps](https://github.com/sindresorhus/gulp-ruby-sass#sourcemap), [autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer), and [combine media-queries](https://www.npmjs.com/package/gulp-combine-mq))
 - [Image optimization](https://www.npmjs.com/package/gulp-imagemin)
 - [Sprite generation](https://www.npmjs.com/package/css-sprite)
