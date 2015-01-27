@@ -17,17 +17,16 @@ Includes the following tools, tasks, and workflows:
 - Error handling in the console [and in Notification Center](https://github.com/mikaelbr/gulp-notify)
 - Compression task for production builds (CSS + JS)
 
+### Requirements
+
+- [Cairo](https://github.com/Automattic/node-canvas/wiki/installation---osx)
+- [Canvas](https://github.com/Automattic/node-canvas/wiki/installation---osx)
 
 ### Install
 ```
 npm install
 ```
-This runs through all dependencies listed in `package.json` and downloads them to a `node_modules` folder in your project directory.
-
-### Requirements
-
-- [Cairo](https://github.com/Automattic/node-canvas/wiki/installation---osx)
-- [Canvas](https://github.com/Automattic/node-canvas/wiki/installation---osx)
+This runs through all dependencies listed in `package.json` and downloads them to a `node_modules` folder in your project directory. See [troubleshooting](https://github.com/40Digits/eta#troubleshooting) section if you run into errors.
 
 ### gulp
 
