@@ -15,9 +15,7 @@ module.exports = {
 	selectors: {
 		// 'body': 			['./modules/global', './modules/header'],
 		// 'div.example': 	['./views/example']
-		'div.example': 		['./views/example'],
-		// 'div.test': 		['./views/test'],
-		'body':				['./views/test2']
+		'div.example': 		['./views/example']
 
 	}
 };
