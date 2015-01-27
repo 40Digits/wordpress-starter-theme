@@ -55,6 +55,6 @@ All paths and task settings have been abstracted into a centralized config objec
 ### Troubleshooting
 If you are running into canvas errors or `Package xcb-shm was not found`, please run the following commands:
 - If you are using Fish `set -xU PKG_CONFIG_PATH /usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig`
-- If you are using iTerm `export PKG_CONFIG_PATH /usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH` or `export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig`
+- If you are using s/iTerm/general sh `export PKG_CONFIG_PATH /usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH` or `export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig`
 
 For additional install help, [view the installation guide](https://github.com/Automattic/node-canvas/wiki/installation---osx).
