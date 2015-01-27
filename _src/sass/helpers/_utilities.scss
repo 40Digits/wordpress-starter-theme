@@ -17,20 +17,24 @@
 }
 
 // Absolute center content
-@mixin abs-center {
+%abs-center {
 	display: block;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-@mixin abs-center-vertical {
+// Absolute Center Vertically (ie9+)
+// Parent container will need to have a height for it to work.
+%abs-center-vertical {
 	display: block;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-@mixin abs-center-horizontal {
+// Absolute Center Horizontally (ie9+)
+// Parent container will need to have a height for it to work.
+%abs-center-horizontal {
 	display: block;
 	left: 50%;
 	transform: translateX(-50%);
@@ -47,6 +51,34 @@
 	clip: rect(0, 0, 0, 0);
 	position: absolute;
 }
+
+// Ellipsis
+%ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Remove all list styling
+// ex: @extend %naked-list
+%naked-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+// Remove all button styling and reset it to default
+// ex: @extend %naked-button
+%naked-button {
+	background: transparent;
+	outline: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	cursor: pointer;
+}
+
 
 //---------------------------------
 // Layout
@@ -84,6 +116,7 @@
 	}
 }
 
+
 //---------------------------------
 // Cross Browser
 //---------------------------------
@@ -115,25 +148,6 @@
 	background-position: center center;
 }
 
-// Remove all list styling
-// ex: @extend %naked-list
-%naked-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-// Remove all button styling and reset it to default
-// ex: @extend %naked-button
-%naked-button {
-	background: transparent;
-	outline: none;
-	border: 0;
-	padding: 0;
-	margin: 0;
-	font-size: 1em;
-	cursor: pointer;
-}
 
 //---------------------------------
 // Class Helpers

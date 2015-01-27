@@ -5,11 +5,11 @@
 @import "base/reset";
 
 //---------------------------------
-// Variables
+// Options
 //---------------------------------
 
-@import "variables/settings";
-@import "variables/colors";
+@import "settings/options";
+@import "settings/colors";
 
 //---------------------------------
 // Helpers
@@ -21,6 +21,8 @@
 @import "helpers/utilities";
 @import "helpers/mixins/all";
 @import "helpers/extends";
+@import "helpers/symbols";
+@import "helpers/sprites";
 
 //---------------------------------
 // Base
@@ -28,7 +30,7 @@
 
 // Default Base
 @import "base/print";
-@import "base/base";
+@import "base/typography";
 @import "base/forms";
 @import "base/keyframes";
 

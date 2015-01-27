@@ -33,12 +33,14 @@ time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display:block;
+	display: block;
 }
 
 html {
 	box-sizing: border-box;
 	overflow-y: scroll;
+	-ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 }
@@ -97,6 +99,20 @@ abbr[title], dfn[title] {
 	cursor: help;
 }
 
+i,
+em {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -122,21 +138,27 @@ select {
 input[type=search] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
-
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration,
   &::-webkit-search-results-button,
   &::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
-
 }
 
-pre {
-	white-space: pre;
-	white-space: pre-wrap;
-	white-space: pre-line;
-	word-wrap: break-word;
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
 }
 
 sub,
@@ -152,6 +174,18 @@ sup {
 
 sub {
 	bottom: -0.25em;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: pre-line;
+	word-wrap: break-word;
 }
 
 pre,
