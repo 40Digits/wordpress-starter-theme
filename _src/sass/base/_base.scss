@@ -28,10 +28,10 @@ body {
 }
 
 a {
-	color: $color-blue;
+	color: setcolor(black);
 	text-decoration: none;
 	&:hover {
-		color: $color-blue;
+		color: setcolor(black);
 	}
 }
 
@@ -49,6 +49,15 @@ h6 {
 
 	a {
 		color: #000;
+		text-decoration: none;
+		&:hover,
+		&:focus,
+		&:active {
+			color: setcolor(black, medium);
+		}
+		&:focus {
+			outline: none;
+		}
 	}
 }
 

@@ -18,43 +18,58 @@
 // }
 
 //---------------------------------
-// Font Mixin
+// Font Options
 //---------------------------------
 
+// Variables best utilized for font services without family grouping.
+$font-regular: 'Regular Font Family Name', sans-serif;
+$font-light: 'Light Font Family Name', sans-serif;
+$font-bold: 'Bold Font Family Name', sans-serif;
+
+// Variables best utilized for font services with family grouping.
+$font-name-one: 'Font Name One', sans-serif;
+$font-font-two: 'Font Name Two', sans-serif;
+
+// Font List Map
+$fonts: (
+  fontone: (
+    regular: $font-regular,
+    light: $font-light,
+    bold: $font-bold
+  ),
+  fonttwo: (
+    regular: $font-regular,
+    light: $font-light,
+    bold: $font-bold
+  )
+);
+
+// Font Function
+@function setfont($name, $weight: regular) {
+  @if map-has-key($fonts, $name) {
+    @return map-get(map-get($fonts, $name), $weight);
+  } @else {
+    @warn "Couldn't find a font named `#{$name}`.";
+  }
+}
+
+// Font Mixin
 @mixin font($family: sans-serif, $weight: normal) {
-	// Generic font stack
-	@if $family == "generic" {
+	// Default Font Stack
+	@if $family == "default" {
 		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	}
 	// Font One
 	@if $family == "font-one" {
-		font-family: "Neue Helvetica W01", sans-serif;
-		font-style: normal;
+		font-family: $font-name-one;
 	}
 	// Font Two
 	@if $family == "font-two" {
-		font-family: "ClarendonBT-Roman", serif;
+		font-family: $font-name-two;
 	}
 	font-weight: $weight;
 }
 
-//---------------------------------
-// List out Font Weights
-// Guide: http://help.typekit.com/customer/portal/articles/6855-using-multiple-weights-and-styles
-//---------------------------------
-
-// Font One
-// --------------------------------
-// Light   : 300
-// Regular : 400
-// Medium  : 500
-// Bold    : 600
-// Heavy   : 700
-
-// Font Two
-// --------------------------------
-// Bold    : 800
-// Heavy   : 900
 
 //----------------------------------
 // Icon Fonts
