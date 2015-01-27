@@ -23,17 +23,16 @@ var browserifyTask = function(callback, devMode) {
 
   var browserifyThis = function(bundleConfig) {
 
-    // location of the browserify _config.js file
+    // Location of the browserify _config.js file
     var _config = '../../' + bundleConfig.configJS;
 
-    // removed the cached version of the browserify _config.js file
-    // if the dev changed this file we want the newest version
+    // Removed the cached version of the browserify _config.js file
+    // If the dev changed this file we want the newest version
     delete require.cache[require.resolve(_config)];
 
     var toRequire = {},
       // require the browserify _config.js file to get the selectores
       browserifyConfig = require(_config);
-
 
     Object.keys(browserifyConfig.selectors).forEach(function (key) {
       browserifyConfig.selectors[key].forEach(function (file) {
@@ -42,10 +41,10 @@ var browserifyTask = function(callback, devMode) {
       });
     });
 
-
+    // Define what the updated bundle entry is.
     bundleConfig.entries = [bundleConfig.mainJS].concat(Object.keys(toRequire));
 
-    console.log(bundleConfig.entries);
+    //console.log(bundleConfig.entries);
 
     var bundler = browserify({
       // Required watchify args
