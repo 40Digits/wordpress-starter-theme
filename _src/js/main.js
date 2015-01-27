@@ -7,7 +7,7 @@
 //                                                                       //
 ///////////////////////////////////////////////////////////////////////////
 
-var config = require('./_config'),
+var config = require('./config/configMain'),
   $ = window.jQuery,
 
   toRequire = [],

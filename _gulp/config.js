@@ -11,7 +11,7 @@ var _source = {
   sprites:  sourceDir + '/sprites/*.png',
   styles:   sourceDir + '/sass/**/*.{sass,scss}',
   symbols:  sourceDir + '/symbols/*.svg',
-  tpl:      sourceDir + '/tpl/'
+  tpl:      sourceDir + '/templates/'
 };
 
 // Assets Directory
@@ -34,10 +34,13 @@ module.exports = {
   browserify: {
     debug: true,
     bundleConfigs: [{
-      entries: _source.scripts + 'main.js',
+      entries: [],
       dest: _assets.scripts,
-      outputName: 'main.js'
-    }]
+      outputName: 'main.js',
+      mainJS: _source.scripts + 'main.js',
+      configJS: _source.scripts + 'config/configMain.js'
+    }],
+    _source: _source
   },
   sass: {
     src: _source.styles,

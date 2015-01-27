@@ -71,11 +71,6 @@ address {
 	font-size: rem(16px);
 }
 
-p,
-dl {
-	margin-bottom: rem(20px);
-}
-
 i,
 em {
 	font-style: italic;
@@ -93,17 +88,14 @@ strong {
 ul,
 ol,
 dd {
-	line-height: rem(20px);
 }
 
 ul,
 ol {
-	margin-bottom: rem(20px);
 }
 
 li {
-	font-size: inherit;
-	line-height: rem(20px);
+	line-height: 1;
 }
 
 //---------------------------------

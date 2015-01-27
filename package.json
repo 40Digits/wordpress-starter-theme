@@ -8,9 +8,6 @@
     "type": "git",
     "url": "git://github.com/40Digits/eta.git"
   },
-  "browser": {
-    "plugin": "./src/javascript/vendor/jquery-plugin.js"
-  },
   "browserify": {
     "transform": [
       "browserify-shim"
@@ -18,9 +15,8 @@
   },
   "browserify-shim": {
     "plugin": {
-      "exports": "plugin",
       "depends": [
-        "jquery:$"
+        "jquery: window.jQuery"
       ]
     }
   },

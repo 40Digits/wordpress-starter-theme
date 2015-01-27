@@ -4,13 +4,13 @@ var gulp       = require('gulp'),
     gulpStart  = require('../util/gulpstart'),
     livereload = require('gulp-livereload');
 
-gulp.task('watch', ['watchify'], function () {
+gulp.task('watch', function () {
   livereload();
   watch({
     root: config.watch.src,
     match: [{
-      when: 'js/**',
-      then: gulpStart('js')
+      when: 'js/**/*.+(js)',
+      then: gulpStart('browserify')
     }, {
       when: 'sass/**/*.+(sass|scss)',
       then: gulpStart('sass')
