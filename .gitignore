@@ -42,4 +42,6 @@ Thumbs.db
 # SUBLIME
 *.sublime-*
 
+# Compiler #
+############
 node_modules
