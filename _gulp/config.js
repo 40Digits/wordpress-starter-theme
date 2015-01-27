@@ -44,11 +44,9 @@ module.exports = {
     src: _source.styles,
     dest: appDir,
     settings: {
-      "sourcemap=none": true,
-      style: 'nested',
-      lineNumber: true,
-      require: ['sass-globbing'],
-      trace: true
+      indentedSyntax: false,
+      style: 'expanded',
+      sourceComments: 'normal'
     }
   },
   autoprefixer: {

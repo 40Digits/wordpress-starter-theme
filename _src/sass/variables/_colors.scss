@@ -2,11 +2,26 @@
 // COLORS
 //=================================
 
-// Start all colors with $color-
-// Not only does it help you out when you are coding, but the colors will automatically pull up as you start typing.
-// Please utilize actual color names. ex: $color-skyblue over $color-warning.
-// For color ideas, use http://chir.ag/projects/name-that-color/ for a rough idea.
+// Color Map
+$colors: (
+  black: (
+    base: #888,
+    light: #222,
+    medium: #555,
+    dark: #777
+  ),
+  teal: (
+    base: #139397,
+    light: #33afb3,
+    dark: #264d4e
+  )
+);
 
-$color-aqua:			#89d2e6;
-$color-blue:			#222c64;
-$color-pink:			#091156;
+// Color Function
+@function setcolor($color_name, $tone: base) {
+  @if map-has-key($colors, $color_name) {
+    @return map-get(map-get($colors, $color_name), $tone);
+  } @else {
+    @warn "Couldn't find a color named `#{$color_name}`.";
+  }
+}
