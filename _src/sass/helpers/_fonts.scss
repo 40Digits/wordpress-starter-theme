@@ -54,7 +54,7 @@ $fonts: (
 }
 
 // Font Mixin
-@mixin font($family: sans-serif, $weight: normal) {
+@mixin setfont($family: sans-serif, $weight: normal) {
 	// Default Font Stack
 	@if $family == "default" {
 		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;

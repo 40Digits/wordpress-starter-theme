@@ -129,7 +129,7 @@ a img {
     }
 
     .wp-caption-text {
-        @include font(nh, 400);
+        @include setfont(generic);
         font-size: rem(12);
         color: #777;
         line-height: 16px;

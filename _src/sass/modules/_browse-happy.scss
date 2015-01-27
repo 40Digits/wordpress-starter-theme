@@ -20,7 +20,7 @@
 	z-index: 800;
 
 	p {
-		@include abs-center;
+		@extend %abs-center;
 		display: block;
 		width: 800px;
 		height: 200px;

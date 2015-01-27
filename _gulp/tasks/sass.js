@@ -17,5 +17,3 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(config.sass.dest))
     .pipe(livereload());
 });
-
-//.pipe(autoprefixer(config.autoprefixer))
