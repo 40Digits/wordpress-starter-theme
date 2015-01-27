@@ -23,10 +23,16 @@ var browserifyTask = function(callback, devMode) {
 
   var browserifyThis = function(bundleConfig) {
 
-    delete require.cache[require.resolve('../../_src/js/_config.js')];
+    // location of the browserify _config.js file
+    var _config = '../../' + bundleConfig.configJS;
+
+    // removed the cached version of the browserify _config.js file
+    // if the dev changed this file we want the newest version
+    delete require.cache[require.resolve(_config)];
 
     var toRequire = {},
-      browserifyConfig = require('../../_src/js/_config.js');
+      // require the browserify _config.js file to get the selectores
+      browserifyConfig = require(_config);
 
 
     Object.keys(browserifyConfig.selectors).forEach(function (key) {
@@ -36,7 +42,8 @@ var browserifyTask = function(callback, devMode) {
       });
     });
 
-    bundleConfig.entries = [config._source.scripts + 'main.js'].concat(Object.keys(toRequire));
+
+    bundleConfig.entries = [bundleConfig.mainJS].concat(Object.keys(toRequire));
 
     console.log(bundleConfig.entries);
 
@@ -67,13 +74,6 @@ var browserifyTask = function(callback, devMode) {
         .pipe(gulp.dest(bundleConfig.dest))
         .on('end', reportFinished);
     };
-
-    if(global.isWatching) {
-      // Wrap with watchify and rebundle on changes
-      bundler = watchify(bundler);
-      // Rebundle on update
-      bundler.on('update', bundle);
-    }
 
     var reportFinished = function() {
       // Log when bundling completes

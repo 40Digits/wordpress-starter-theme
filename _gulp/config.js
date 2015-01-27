@@ -34,9 +34,11 @@ module.exports = {
   browserify: {
     debug: true,
     bundleConfigs: [{
-      entries: [_source.scripts + 'main.js'],
+      entries: [],
       dest: _assets.scripts,
-      outputName: 'main.js'
+      outputName: 'main.js',
+      mainJS: _source.scripts + 'main.js',
+      configJS: _source.scripts + '_config.js'
     }],
     _source: _source
   },
