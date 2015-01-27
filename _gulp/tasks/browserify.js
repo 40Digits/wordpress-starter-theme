@@ -23,6 +23,23 @@ var browserifyTask = function(callback, devMode) {
 
   var browserifyThis = function(bundleConfig) {
 
+    delete require.cache[require.resolve('../../_src/js/_config.js')];
+
+    var toRequire = {},
+      browserifyConfig = require('../../_src/js/_config.js');
+
+
+    Object.keys(browserifyConfig.selectors).forEach(function (key) {
+      browserifyConfig.selectors[key].forEach(function (file) {
+        file = config._source.scripts + file;
+        toRequire[file] = file;
+      });
+    });
+
+    bundleConfig.entries = [config._source.scripts + 'main.js'].concat(Object.keys(toRequire));
+
+    console.log(bundleConfig.entries);
+
     var bundler = browserify({
       // Required watchify args
       cache: {}, packageCache: {}, fullPaths: false,

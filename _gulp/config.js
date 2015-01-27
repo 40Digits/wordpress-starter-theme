@@ -34,10 +34,11 @@ module.exports = {
   browserify: {
     debug: true,
     bundleConfigs: [{
-      entries: _source.scripts + 'main.js',
+      entries: [_source.scripts + 'main.js'],
       dest: _assets.scripts,
       outputName: 'main.js'
-    }]
+    }],
+    _source: _source
   },
   sass: {
     src: _source.styles,

@@ -1,6 +1,6 @@
 
 module.exports = function() {
-
+	// EXAMPLE.JS
 	$('button.toggle-search').on('click touch tap', function(e){
 		$('body').toggleClass('js-search-open');
 		e.preventDefault();
@@ -22,4 +22,3 @@ module.exports = function() {
 		}
 	});
 }
-
