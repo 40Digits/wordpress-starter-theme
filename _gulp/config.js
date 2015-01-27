@@ -32,15 +32,15 @@ var _processor = {
 // Gulp options/settings for tasks.
 module.exports = {
   browserify: {
-    debug: true,
+    debug: false,
+    src: _source.scripts,
     bundleConfigs: [{
       entries: [],
       dest: _assets.scripts,
       outputName: 'main.js',
-      mainJS: _source.scripts + 'main.js',
+      sourceJS: _source.scripts + 'main.js',
       configJS: _source.scripts + 'config/configMain.js'
-    }],
-    _source: _source
+    }]
   },
   sass: {
     src: _source.styles,
