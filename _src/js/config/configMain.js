@@ -13,9 +13,7 @@ module.exports = {
     'body.anotherTemplate': ['./this_one', '!./not_this_one']
   */
   selectors: {
-    // 'body':      ['./modules/global', './modules/header'],
     'div.module':   ['./modules/sampleModule'],
     'div.sample':   ['./views/sampleView']
-
   }
 };

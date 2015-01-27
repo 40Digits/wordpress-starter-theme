@@ -36,13 +36,13 @@ var browserifyTask = function(callback, devMode) {
 
     Object.keys(browserifyConfig.selectors).forEach(function (key) {
       browserifyConfig.selectors[key].forEach(function (file) {
-        file = config._source.scripts + file;
+        file = config.src + file;
         toRequire[file] = file;
       });
     });
 
     // Define what the updated bundle entry is.
-    bundleConfig.entries = [bundleConfig.mainJS].concat(Object.keys(toRequire));
+    bundleConfig.entries = [bundleConfig.sourceJS].concat(Object.keys(toRequire));
 
     //console.log(bundleConfig.entries);
 
