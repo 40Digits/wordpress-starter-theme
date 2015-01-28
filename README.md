@@ -22,9 +22,6 @@ Eta includes the following tools, tasks, and workflows:
 ***
 
 ## Install
-* You can clone the repository.
-* or... download repository and place it into your HelperPress theme folder. 
-
 ```
 npm install
 ```
