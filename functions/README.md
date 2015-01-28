@@ -5,7 +5,7 @@ When creating functions, smaller plugins, or anything else that is related to th
 * Code related to the actual site shoulde to be placed under `/site/`
 * Code that relates to Wordpress, should be placed under `/wordpress/`
 * The main directory of `/functions/` shouldn't contain any files except:
-  - customposttypes.php
+  - custom_posttypes.php
   - custom_sidebars.php
   - custom_taxonomies.php
   - environment.php
