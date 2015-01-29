@@ -11,7 +11,8 @@ var _source = {
   sprites:  sourceDir + '/sprites/*.png',
   styles:   sourceDir + '/sass/**/*.{sass,scss}',
   symbols:  sourceDir + '/symbols/*.svg',
-  tpl:      sourceDir + '/templates/'
+  tpl:      sourceDir + '/templates/',
+  php:      appDir + '**/*.php'
 };
 
 // Assets Directory
@@ -96,6 +97,9 @@ module.exports = {
   images: {
     src: _source.images,
     dest: _assets.images
+  },
+  php: {
+    src: _source.php
   },
   watch: {
     src: _source.root,
