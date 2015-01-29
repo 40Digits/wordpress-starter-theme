@@ -1,6 +1,46 @@
-.sass-cache
+# FOLDERS
 _dist
 assets
+node_modules
+
+# COMPILED SOURCE
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# PACKAGES
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.iso
+*.jar
+
+# LOGS AND DATABASES
+*.log
+*.sql
+*.sqlite
+
+# OS GENERATED FILES
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# SASS
+.sass-cache
 style.css
 style-cpt.css
-node_modules
+
+# WORDPRESS
+.htaccess
+
+# SUBLIME
+*.sublime-*
