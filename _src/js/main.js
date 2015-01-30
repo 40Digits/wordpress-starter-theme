@@ -54,3 +54,7 @@ $.each(toRequire, function (i, moduleId) {
     }
   }
 });
+
+// browserfiy solution
+// ========
+return;  require('./modules/sampleModule');  require('./views/sampleView'); 

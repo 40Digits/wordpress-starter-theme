@@ -15,7 +15,7 @@ var watchify        = require('watchify');
 var bundleLogger    = require('../util/bundleLogger');
 var handleErrors    = require('../util/handleErrors');
 var config          = require('../config').browserify;
-
+var fs              = require('fs');
 
 var browserifyTask = function(callback, devMode) {
 
@@ -36,15 +36,21 @@ var browserifyTask = function(callback, devMode) {
 
     Object.keys(browserifyConfig.selectors).forEach(function (key) {
       browserifyConfig.selectors[key].forEach(function (file) {
-        file = config.src + file;
-        toRequire[file] = file;
+        toRequire[file] = " require('" + file + "'); ";
       });
     });
 
-    // Define what the updated bundle entry is.
-    bundleConfig.entries = [bundleConfig.sourceJS].concat(Object.keys(toRequire));
+    var content = fs.readFileSync(config.src + 'main.js').toString().split('========')[0];
 
-    //console.log(bundleConfig.entries);
+    content = content + '========' + '\n' + 'return; ';
+
+    Object.keys(toRequire).forEach(function (key) {
+      content = content + toRequire[key];
+    });
+
+    fs.writeFileSync(config.src + 'main.js', content);
+
+    bundleConfig.entries = [bundleConfig.sourceJS].concat([config.src + 'main.js']);
 
     var bundler = browserify({
       // Required watchify args
