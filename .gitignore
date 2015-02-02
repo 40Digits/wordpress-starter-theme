@@ -1,9 +1,5 @@
-# FOLDERS
-_dist
-assets
-node_modules
-
-# COMPILED SOURCE
+# Compiled Source #
+###################
 *.com
 *.class
 *.dll
@@ -11,36 +7,54 @@ node_modules
 *.o
 *.so
 
-# PACKAGES
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
+# Packages #
+############
 *.7z
 *.dmg
 *.iso
 *.jar
 
-# LOGS AND DATABASES
+# Logs & Databases #
+######################
 *.log
 *.sql
 *.sqlite
+*.sublime-*
 
-# OS GENERATED FILES
+# OS Generated Files #
+######################
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
 Icon?
+ehthumbs.db
 Thumbs.db
 
-# SASS
+# Sass #
+########
 .sass-cache
-style.css
-style-cpt.css
 
-# WORDPRESS
+# Wordpress #
+#############
 .htaccess
+sitemap.xml
+sitemap.xml.gz
+wp-config.php
+wp-config.local
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/timthumb-cache/
+wp-content/themes/twenty*
 
-# SUBLIME
-*.sublime-*
+# Build Folders #
+#################
+assets
+node_modules
