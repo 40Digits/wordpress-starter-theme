@@ -1,8 +1,8 @@
 <?php
-// http://codex.wordpress.org/Function_Reference/register_post_type
 
-function register_CPTs()
-{
+	// http://codex.wordpress.org/Function_Reference/register_post_type
+
+function register_custom_post_types() {
 
 	/*
 
@@ -31,19 +31,17 @@ function register_CPTs()
 		'show_in_menu' => true,
 		'show_in_nav_menus' => true,
 		'query_var' => true,
-		'rewrite' => Array('slug'=>'project'),
+		'rewrite' => array('slug' => 'project'),
 		'capability_type' => 'post',
 		'has_archive' => true,
 		'hierarchical' => false,
 		'menu_position' => 21,
-		'supports' => array('title','page-attributes')
+		'supports' => array('title', 'page-attributes')
 	);
 
-	register_post_type('portfolio',$args);
-
+	register_post_type('portfolio', $args);
 
 	*/
 
 }
-
-add_action('init', 'register_CPTs');
+add_action( 'init', 'register_custom_post_types' );

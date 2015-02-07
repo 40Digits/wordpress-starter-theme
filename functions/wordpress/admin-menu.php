@@ -1,8 +1,7 @@
 <?php
 
 // Registers admin menu separators
-add_action('admin_menu','admin_menu_separator');
-
+add_action( 'admin_menu','admin_menu_separator' );
 
 // Create Admin Menu Separator
 function add_admin_menu_separator($position) {
@@ -35,4 +34,4 @@ function admin_menu_separator() {
 function forty_cpt_icons() {
     wp_enqueue_style('forty-cpt-icons', get_template_directory_uri() . '/style-cpt.css');
 }
-add_action('admin_enqueue_scripts', 'forty_cpt_icons');
+add_action( 'admin_enqueue_scripts', 'forty_cpt_icons' );
