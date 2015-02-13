@@ -1,9 +1,9 @@
 <?php
 
-if( ENVIRONMENT != 'production' ){
+if ( ENVIRONMENT != 'production' ) {
 
-	// discourage search engines on non-production sites always.
-	function forty_no_search_engines(){
+	// discourage search engines on non-production sites
+	function forty_no_search_engines() {
 		return "User-agent: *
 Disallow: /";
 	}

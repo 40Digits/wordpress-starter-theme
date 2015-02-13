@@ -1,7 +1,9 @@
 
 	<?php wp_footer(); ?>
+
 	<script src="<?php bloginfo('template_directory') ?>/assets/js/main.js"></script>
-	<?php if(ENVIRONMENT == 'staging' || ENVIRONMENT == 'testing'){ ?>
+
+	<?php if ( ENVIRONMENT != 'production' ) { ?>
 		<script type='text/javascript'>
 			(function (d, t) {
 				var bh = d.createElement(t), s = d.getElementsByTagName(t)[0],
@@ -12,5 +14,6 @@
 			})(document, 'script');
 		</script>
 	<?php } ?>
+
 </body>
 </html>
