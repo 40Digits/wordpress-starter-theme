@@ -4,7 +4,7 @@ var gulp      = require('gulp'),
     size      = require('gulp-filesize'),
     combineMQ = require('gulp-combine-mq');
 
-gulp.task('minifyCss', ['sass'], function() {
+gulp.task('minifyCss', ['sass_dist'], function() {
   return gulp.src(config.cssSrc)
     .pipe(combineMQ())
     .pipe(minifyCSS({advanced:false}))

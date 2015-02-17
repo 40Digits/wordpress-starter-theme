@@ -1,4 +1,4 @@
 var gulp = require('gulp');
 
 // Run this to compress all the things!
-gulp.task('production', ['minifyCss', 'uglifyJs']);
+gulp.task('production', ['minifyCss', 'uglifyJs', 'images_dist']);

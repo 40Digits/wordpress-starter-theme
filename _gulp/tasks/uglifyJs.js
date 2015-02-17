@@ -3,7 +3,7 @@ var gulp   = require('gulp'),
     size   = require('gulp-filesize'),
     uglify = require('gulp-uglify');
 
-gulp.task('uglifyJs', ['browserify'], function() {
+gulp.task('uglifyJs', ['browserify_dist'], function() {
   return gulp.src(config.jsSrc)
     .pipe(uglify())
     .pipe(gulp.dest(config.jsDest))
