@@ -25,11 +25,6 @@ var _assets = {
   symbols:  assetsDir + '/fonts/symbols/'
 }
 
-// What sort of pre-processor are we utilizing?
-var _processor = {
-  format: 'scss'
-};
-
 // Gulp options/settings for tasks.
 module.exports = {
   browserify: {
@@ -68,9 +63,9 @@ module.exports = {
     destSass: _source.root + '/sass/helpers',
     settings: {
       retina: true,
-      style: '_sprites.' + _processor.format,
+      style: '_sprites.scss',
       cssPath: _assets.sprites,
-      processor: _processor.format,
+      processor: 'scss',
       orientation: 'binary-tree',
       prefix: 'sprite'
     }
@@ -78,7 +73,7 @@ module.exports = {
   symbols: {
     src: _source.symbols,
     tplCss: _source.tpl + 'symbols.tpl.css',
-    tplSass: _source.tpl + 'symbols.tpl.' + _processor.format,
+    tplSass: _source.tpl + 'symbols.tpl.scss',
     tplHtml: _source.tpl + 'symbols.tpl.html',
     destFont: _assets.symbols,
     destSass: _source.root + '/sass/helpers',
@@ -91,7 +86,7 @@ module.exports = {
     },
     renameSass: {
       basename: '_symbols',
-      extname: '.' + _processor.format
+      extname: '.scss'
     }
   },
   images: {

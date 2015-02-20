@@ -48,10 +48,14 @@
 @mixin symbols($symbol: false) {
   @extend %symbols;
 
-  @if $symbol == "symbol-icon" {
+  @if $symbol == "book" {
     content: '\E001';
+  }
+  @if $symbol == "briefcase" {
+    content: '\E002';
   }
 }
 
 // Individual CSS styles for when you call by the class name in markup.
-.s-symbol-icon:before { content: "\E001" }
+.s-book:before { content: "\E001" }
+.s-briefcase:before { content: "\E002" }

@@ -4,7 +4,7 @@
 //   directory. Configuration (selectors and whatnot) should go in the   //
 //   `_config.js` file. Check the README or ask someone if you have      //
 //   any questions. Happy developing!                                    //
-//                                                                       //  
+//                                                                       //   
 ///////////////////////////////////////////////////////////////////////////
 
 var config = require('./config/configMain'),
