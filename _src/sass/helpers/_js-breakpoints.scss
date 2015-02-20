@@ -13,10 +13,6 @@
 		head {
 			font-family: $mq-visible-name;
 		}
-		body:after {
-			content: $mq-visible-name;
-			display: none;
-		}
 	}
 }
 
@@ -24,23 +20,19 @@
 // Define the JS Breakpoints
 //---------------------------------
 
-// Phone Landscape +
-@include jsbp(mini, 'mq-min-mini');
-// E-Readers +
-@include jsbp(small, 'mq-min-small');
-// Tablets +
-@include jsbp(medium, 'mq-min-medium');
-// Large Desktops + Tablet Landscape +
-@include jsbp(large, 'mq-min-large');
-// Desktops Larger +
-@include jsbp(xlarge, 'mq-min-xlarge');
-// Desktops Even Larger +
-@include jsbp(xxlarge, 'mq-min-xxlarge');
-// Desktops Even Larger +
-@include jsbp(xxxlarge, 'mq-min-xxxlarge');
 // Phone Portrait Down +
-@include jsbp(max-tiny, 'mq-mini');
-// Tablet Portrait
-@include jsbp(tab-port, 'mq-portrait');
-// Tablet Landscape
-@include jsbp(tab-land, 'mq-landscape');
+@include jsbp(max-tiny, 'mq-tiny');
+// Phone Landscape +
+@include jsbp(mini, 'mq-mini');
+// E-Readers +
+@include jsbp(small, 'mq-small');
+// Tablets +
+@include jsbp(medium, 'mq-medium');
+// Large Desktops + Tablet Landscape +
+@include jsbp(large, 'mq-large');
+// Desktops Larger +
+@include jsbp(xlarge, 'mq-xlarge');
+// Desktops Even Larger +
+@include jsbp(xxlarge, 'mq-xxlarge');
+// Desktops Even Larger +
+@include jsbp(xxxlarge, 'mq-xxxlarge');
