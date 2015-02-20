@@ -1,6 +1,5 @@
 $icon-sun: -2px -2px 100px 100px;
 $icon-air: -106px -2px 90px 74px;
-$icon-ampersand: -2px -106px 42px 52px;
 
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
@@ -40,6 +39,6 @@ $icon-ampersand: -2px -106px 42px 52px;
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .sprite {
     background-image: url('assets/images/sprites/sprite@2x.png');
-    background-size: 198px 160px;
+    background-size: 198px 104px;
   }
 }
