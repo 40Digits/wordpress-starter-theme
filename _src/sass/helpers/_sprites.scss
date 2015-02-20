@@ -1,4 +1,44 @@
-$icon-test: -2px -2px 15px 15px;
+$ampersand_00001: -2px -2px 42px 52px;
+$ampersand_00002: -50px -2px 42px 52px;
+$ampersand_00003: -97px -2px 42px 52px;
+$ampersand_00004: -145px -2px 42px 52px;
+$ampersand_00005: -192px -2px 42px 52px;
+$ampersand_00006: -240px -2px 42px 52px;
+$ampersand_00007: -287px -2px 42px 52px;
+$ampersand_00008: -335px -2px 42px 52px;
+$ampersand_00009: -382px -2px 42px 52px;
+$ampersand_00010: -430px -2px 42px 52px;
+$ampersand_00011: -477px -2px 42px 52px;
+$ampersand_00012: -525px -2px 42px 52px;
+$ampersand_00013: -572px -2px 42px 52px;
+$ampersand_00014: -620px -2px 42px 52px;
+$ampersand_00015: -667px -2px 42px 52px;
+$ampersand_00016: -715px -2px 42px 52px;
+$ampersand_00017: -762px -2px 42px 52px;
+$ampersand_00018: -810px -2px 42px 52px;
+$ampersand_00019: -857px -2px 42px 52px;
+$ampersand_00020: -905px -2px 42px 52px;
+$ampersand_00021: -952px -2px 42px 52px;
+$ampersand_00022: -1000px -2px 42px 52px;
+$ampersand_00023: -1047px -2px 42px 52px;
+$ampersand_00024: -1095px -2px 42px 52px;
+$ampersand_00025: -1142px -2px 42px 52px;
+$ampersand_00026: -1190px -2px 42px 52px;
+$ampersand_00027: -1237px -2px 42px 52px;
+$ampersand_00028: -1285px -2px 42px 52px;
+$ampersand_00029: -1332px -2px 42px 52px;
+$ampersand_00030: -1380px -2px 42px 52px;
+$ampersand_00031: -1427px -2px 42px 52px;
+$ampersand_00032: -1475px -2px 42px 52px;
+$ampersand_00033: -1522px -2px 42px 52px;
+$ampersand_00034: -1570px -2px 42px 52px;
+$ampersand_00035: -1617px -2px 42px 52px;
+$ampersand_00036: -1665px -2px 42px 52px;
+$ampersand_00037: -1712px -2px 42px 52px;
+$ampersand_00038: -1760px -2px 42px 52px;
+$ampersand_00039: -1807px -2px 42px 52px;
+$ampersand_00040: -1855px -2px 42px 52px;
+$ampersand_00041: -1902px -2px 42px 52px;
 
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
@@ -30,6 +70,6 @@ $icon-test: -2px -2px 15px 15px;
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .sprite {
     background-image: url('assets/images/sprites/sprite-x2.png');
-    background-size: 20px 20px;
+    background-size: 1947px 57px;
   }
 }

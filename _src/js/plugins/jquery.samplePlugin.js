@@ -1,3 +1,3 @@
 module.exports = function() {
-  console.log('Sample Plugin');
+  console.log('Sample Plugin'); 
 }
