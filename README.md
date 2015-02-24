@@ -13,6 +13,7 @@ Eta includes the following tools, tasks, and workflows:
 - [Custom Icon Font generation](https://www.npmjs.com/package/gulp-iconfont)
 - Error handling in the console [and in Notification Center](https://github.com/mikaelbr/gulp-notify)
 - Compression task for production builds (CSS + JS)
+- [EJS Templating](https://github.com/unfold/browserify-ejs)
 
 ## Requirements
 

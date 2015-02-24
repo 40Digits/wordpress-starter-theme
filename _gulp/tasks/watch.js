@@ -9,7 +9,7 @@ gulp.task('watch', ['php'], function () {
   watch({
     root: config.watch.src,
     match: [{
-      when: 'js/**/*.+(js)',
+      when: 'js/**/*.+(js|ejs)',
       then: gulpStart('browserify')
     }, {
       when: 'sass/**/*.+(sass|scss)',
