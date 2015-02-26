@@ -10,7 +10,8 @@
   },
   "browserify": {
     "transform": [
-      "browserify-shim"
+      "browserify-shim",
+      "browserify-ejs"
     ]
   },
   "browserify-shim": {
@@ -23,6 +24,7 @@
   "devDependencies": {
     "browserify": "^8.0.2",
     "browserify-shim": "^3.8.2",
+    "browserify-ejs": "^0.0.2",
     "css-sprite": "^0.9.3",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
