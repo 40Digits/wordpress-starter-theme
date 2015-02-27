@@ -1,11 +1,11 @@
 <?php
 
 // Remove default jQuery and add Google hosted version to the footer
-// Are you building a site that doesn't require IE8?
-// Consider using: //ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js
+// Are you building a site that requires IE8?
+// Consider using: //ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
 function enqueue_custom_jquery() {
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', ('//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'), false, '1.11.0', true);
+	wp_register_script('jquery', ('//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'), false, '2.1.3', true);
 	wp_enqueue_script('jquery');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_jquery', 0 );
@@ -30,6 +30,3 @@ include_once('functions/wordpress/admin-menu.php');
 
 // Environment Management
 include_once('functions/environment.php');
-
-// Security
-define('DISALLOW_FILE_EDIT', true);

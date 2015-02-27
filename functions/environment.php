@@ -1,6 +1,6 @@
 <?php
 
-if ( ENVIRONMENT != 'production' ) {
+if ( WP_ENV != 'production' ) {
 
 	// discourage search engines on non-production sites
 	function forty_no_search_engines() {
