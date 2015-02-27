@@ -45,17 +45,17 @@ All new projects should contain the following information in their `README.md` r
 * Developers and their respective roles + major contributions to the project
 * Notes
 
-Here is a sample for Convoy of Hope
+Here is a project sample:
 
 ```md
-# Convoy of Hope
+# Project X
 
 ***
 
 ## URLs
-* Live - http://www.convoyofhope.org
-* Staging - N/A
-* Development - http://coh.dev01.40digits.net
+* Live - http://www.site-name.com
+* Staging - http://staging.site-name.com
+* Development - http://project.test.site-name.com
 
 ## Git Branches
 
@@ -67,21 +67,21 @@ Master needs to be pushed to the WPE origin.
 ***
 
 ## Project Manager(s)
-* Aaron Hardinger
+* John Macklin
 
 ## Developer(s)
 
-#### Besim Huskic
+#### Leslie Knoppe
 * Front-End
-* Convoy of Hope
+* Content Modules
 * Blog
 
-#### David Harris
+#### Andy Dwyer
 * Act-On Integration with Forms
 * Member Registration
 * Event Registration
 
-#### CK Hicks
+#### Tom Haverford
 * ONE DAY to Feed the World
 
 ***
