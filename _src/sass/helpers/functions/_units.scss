@@ -1,0 +1,41 @@
+//---------------------------------
+// Re-Usable EM & REM Functions
+//---------------------------------
+
+@function em($px-values, $font-size: $body-font-size) {
+	// Create an empty list that we can dump values into
+	$em-values: ();
+	@each $value in $px-values {
+		// Check to see if value is 0, auto, or inherited
+		// If so, do nothing and output value
+		@if $value == 0 or $value == auto or $value == inherit {
+			$em-values: append($em-values, $value);
+		// If the value is a pixel, convert to em value
+		} @else if unit($value) == 'px' {
+			$em-values: append($em-values, #{($value/$font-size)}em);
+		// For everything else, keep as is
+		} @else {
+			$em-values: append($em-values, $value);
+		}
+	}
+	@return $em-values;
+}
+
+@function rem($px-values, $font-size: $base-font-size) {
+	// Create an empty list that we can dump values into
+	$rem-values: ();
+	@each $value in $px-values {
+		// Check to see if value is 0, auto, or inherited
+		// If so, do nothing and output value
+		@if $value == 0 or $value == auto or $value == inherit {
+			$rem-values: append($rem-values, $value);
+		// If the value is a pixel, convert to em value
+		} @else if unit($value) == 'px' {
+			$rem-values: append($rem-values, #{($value/$font-size)}rem);
+		// For everything else, keep as is
+		} @else {
+			$rem-values: append($rem-values, $value);
+		}
+	}
+	@return $rem-values;
+}

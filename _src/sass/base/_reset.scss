@@ -40,7 +40,7 @@ html {
 	box-sizing: border-box;
 	overflow-y: scroll;
 	-ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 }
@@ -110,7 +110,7 @@ strong {
 }
 
 q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
+		quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 table {
@@ -136,29 +136,29 @@ select {
 }
 
 input[type=search] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-decoration,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration {
-    -webkit-appearance: none;
-  }
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-decoration,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		-webkit-appearance: none;
+	}
 }
 
 fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+		border: 1px solid #c0c0c0;
+		margin: 0 2px;
+		padding: 0.35em 0.625em 0.75em;
 }
 
 button,
 input,
 select,
 textarea {
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0;
+		font-family: inherit;
+		font-size: 100%;
+		margin: 0;
 }
 
 sub,
@@ -177,8 +177,8 @@ sub {
 }
 
 mark {
-    background: #ff0;
-    color: #000;
+		background: #ff0;
+		color: #000;
 }
 
 pre {
