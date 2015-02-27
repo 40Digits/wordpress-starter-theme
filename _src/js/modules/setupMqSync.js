@@ -3,7 +3,7 @@ module.exports = function() {
 	// This module gives you access to our media queries in any other js module.
 	// Usage in other modules: "require('./setupMqSync')()".
 
-	require('../plugins/mediaQuerySync');
+	require('../lib/mediaQuerySync');
 
 	var mqOrder = [
 			'mq-tiny',

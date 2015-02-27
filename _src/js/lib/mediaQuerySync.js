@@ -200,9 +200,9 @@
 			 */
 			swapImage: function($target, newImageSrc) {
 				if ($target.is('img'))
- 					$target.attr('src', newImageSrc);
- 				else
- 					$target.css('background-image', 'url(' + newImageSrc + ')');
+					$target.attr('src', newImageSrc);
+				else
+					$target.css('background-image', 'url(' + newImageSrc + ')');
 			}
 
 		}, // End responsive images module

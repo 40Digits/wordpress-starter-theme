@@ -1,54 +1,54 @@
 {
-  "name": "forty-eta-build-script",
-  "title": "40D Eta Build Script",
-  "description": "Gulp build script used for internal 40Digits projects.",
-  "version": "1.0.0",
-  "homepage": "http://www.40digits.com",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/40Digits/eta.git"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim",
-      "browserify-ejs"
-    ]
-  },
-  "browserify-shim": {
-    "plugin": {
-      "depends": [
-        "jquery: window.jQuery"
-      ]
-    }
-  },
-  "devDependencies": {
-    "browserify": "^8.0.2",
-    "browserify-shim": "^3.8.2",
-    "browserify-ejs": "^0.0.2",
-    "css-sprite": "^0.9.3",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-changed": "^1.1.1",
-    "gulp-combine-mq": "^0.3.1",
-    "gulp-consolidate": "^0.1.2",
-    "gulp-filesize": "0.0.6",
-    "gulp-filter": "^2.0.2",
-    "gulp-iconfont": "^1.0.0",
-    "gulp-if": "0.0.5",
-    "gulp-imagemin": "^2.2.0",
-    "gulp-livereload": "^3.7.0",
-    "gulp-minify-css": "^0.4.6",
-    "gulp-notify": "^2.2.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.3.3",
-    "gulp-sourcemaps": "^1.3.0",
-    "gulp-uglify": "^1.1.0",
-    "gulp-util": "^3.0.0",
-    "lodash": "^2.4.1",
-    "minimatch": "^2.0.1",
-    "monocle": "^1.1.51",
-    "pretty-hrtime": "^1.0.0",
-    "require-dir": "^0.1.0",
-    "vinyl-source-stream": "^1.0.0"
-  }
+	"name": "forty-eta-build-script",
+	"title": "40D Eta Build Script",
+	"description": "Gulp build script used for internal 40Digits projects.",
+	"version": "1.0.0",
+	"homepage": "http://www.40digits.com",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/40Digits/eta.git"
+	},
+	"browserify": {
+		"transform": [
+			"browserify-shim",
+			"browserify-ejs"
+		]
+	},
+	"browserify-shim": {
+		"plugin": {
+			"depends": [
+				"jquery: window.jQuery"
+			]
+		}
+	},
+	"devDependencies": {
+		"browserify": "^8.0.2",
+		"browserify-shim": "^3.8.2",
+		"browserify-ejs": "^0.0.2",
+		"css-sprite": "^0.9.3",
+		"gulp": "^3.8.11",
+		"gulp-autoprefixer": "^2.1.0",
+		"gulp-changed": "^1.1.1",
+		"gulp-combine-mq": "^0.3.1",
+		"gulp-consolidate": "^0.1.2",
+		"gulp-filesize": "0.0.6",
+		"gulp-filter": "^2.0.2",
+		"gulp-iconfont": "^1.0.0",
+		"gulp-if": "0.0.5",
+		"gulp-imagemin": "^2.2.0",
+		"gulp-livereload": "^3.7.0",
+		"gulp-minify-css": "^0.4.6",
+		"gulp-notify": "^2.2.0",
+		"gulp-rename": "^1.2.0",
+		"gulp-sass": "^1.3.3",
+		"gulp-sourcemaps": "^1.3.0",
+		"gulp-uglify": "^1.1.0",
+		"gulp-util": "^3.0.0",
+		"lodash": "^2.4.1",
+		"minimatch": "^2.0.1",
+		"monocle": "^1.1.51",
+		"pretty-hrtime": "^1.0.0",
+		"require-dir": "^0.1.0",
+		"vinyl-source-stream": "^1.0.0"
+	}
 }

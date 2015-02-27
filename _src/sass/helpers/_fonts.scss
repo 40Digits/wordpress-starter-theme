@@ -32,25 +32,25 @@ $font-font-two: 'Font Name Two', sans-serif;
 
 // Font List Map
 $fonts: (
-  fontone: (
-    regular: $font-regular,
-    light: $font-light,
-    bold: $font-bold
-  ),
-  fonttwo: (
-    regular: $font-regular,
-    light: $font-light,
-    bold: $font-bold
-  )
+	fontone: (
+		regular: $font-regular,
+		light: $font-light,
+		bold: $font-bold
+	),
+	fonttwo: (
+		regular: $font-regular,
+		light: $font-light,
+		bold: $font-bold
+	)
 );
 
 // Font Function
 @function setfont($name, $weight: regular) {
-  @if map-has-key($fonts, $name) {
-    @return map-get(map-get($fonts, $name), $weight);
-  } @else {
-    @warn "Couldn't find a font named `#{$name}`.";
-  }
+	@if map-has-key($fonts, $name) {
+		@return map-get(map-get($fonts, $name), $weight);
+	} @else {
+		@warn "Couldn't find a font named `#{$name}`.";
+	}
 }
 
 // Font Mixin

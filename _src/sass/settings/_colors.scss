@@ -4,24 +4,24 @@
 
 // Color Map
 $colors: (
-  black: (
-    base: #888,
-    light: #222,
-    medium: #555,
-    dark: #777
-  ),
-  teal: (
-    base: #139397,
-    light: #33afb3,
-    dark: #264d4e
-  )
+	black: (
+		base: #888,
+		light: #222,
+		medium: #555,
+		dark: #777
+	),
+	teal: (
+		base: #139397,
+		light: #33afb3,
+		dark: #264d4e
+	)
 );
 
 // Color Function
 @function setcolor($color_name, $tone: base) {
-  @if map-has-key($colors, $color_name) {
-    @return map-get(map-get($colors, $color_name), $tone);
-  } @else {
-    @warn "Couldn't find a color named `#{$color_name}`.";
-  }
+	@if map-has-key($colors, $color_name) {
+		@return map-get(map-get($colors, $color_name), $tone);
+	} @else {
+		@warn "Couldn't find a color named `#{$color_name}`.";
+	}
 }
