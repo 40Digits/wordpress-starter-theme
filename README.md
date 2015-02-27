@@ -7,13 +7,14 @@ Comes included with:
 - [gulp powered](https://github.com/40Digits/gulp-starter) - comes with sass, browserify, sprite sheet generation, image optimization, and custom icon font generation.
 - Manageable Wordpress Functions
 - Core necessities to get the site running, up to you on what is and isn't needed.
+- Environment Management 
 
 For additional [useful functions](http://wiki.40digits.net/resources/wp-functions-to-take-advantage-of/) to take advantage of, read our Wiki article.
 
 ## Installation
 
-* Download theme and place into your HelperPress theme folder.
-* or clone repo for new non HelperPress projects.
+* Download theme and place into your Wordpress install. `/wp-content/themes/`
+* or clone repo for
 
 ## Build Script Documentation
 
