@@ -43,6 +43,7 @@ module.exports = {
 		dest: appDir,
 		settings: {
 			indentedSyntax: true,
+			errLogToConsole: true,
 			style: 'expanded',
 			sourceComments: 'normal'
 		}
