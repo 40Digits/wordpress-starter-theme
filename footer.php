@@ -1,8 +1,6 @@
 
 	<?php wp_footer(); ?>
 
-	<script src="<?php bloginfo('template_directory') ?>/assets/js/main.js"></script>
-
 	<?php if ( WP_ENV != 'production' ) { ?>
 		<script type='text/javascript'>
 			(function (d, t) {
