@@ -15,7 +15,7 @@ function enqueue_custom_scripts() {
 	wp_register_script('site-main', (get_stylesheet_directory_uri() . '/assets/js/main.js'), array('jquery'), '1.0.0', true);
 	wp_enqueue_script('site-main');
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_custom_scripts' );s
+add_action( 'wp_enqueue_scripts', 'enqueue_custom_scripts' );
 
 // Functions (Required)
 include_once('functions/wordpress/custom_post_types.php');
