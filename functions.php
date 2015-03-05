@@ -2,7 +2,7 @@
 
 function enqueue_custom_scripts() {
 	// Add modernizr to the header
-	wp_register_script('modernizr', (get_bloginfo('template_directory') . '/assets/js/vendor/modernizr.js'), false, '2.8.3', false);
+	wp_register_script('modernizr', (get_stylesheet_directory_uri() . '/assets/js/vendor/modernizr.js'), false, '2.8.3', false);
 	wp_enqueue_script('modernizr');
 
 	// Remove default jQuery and add Google hosted version to the footer
@@ -12,7 +12,7 @@ function enqueue_custom_scripts() {
 	wp_enqueue_script('jquery');
 
 	// Load the site's main.js file but make sure jQuery is there first
-	wp_register_script('site-main', (get_bloginfo('template_directory') . '/assets/js/main.js'), array('jquery'), '1.0.0', true);
+	wp_register_script('site-main', (get_stylesheet_directory_uri() . '/assets/js/main.js'), array('jquery'), '1.0.0', true);
 	wp_enqueue_script('site-main');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_scripts' );s

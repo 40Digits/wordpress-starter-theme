@@ -9,13 +9,13 @@
 
 	<title><?php wp_title('&raquo;','true','right'); ?></title>
 
-	<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css" />
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
 
-	<link rel="shortcut icon" type="image/ico" href="<?php echo get_bloginfo('template_directory'); ?>/favicon.ico" />
-	<link rel="apple-touch-icon" href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicon/touch-60.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicon/touch-76.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicon/touch-120.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicon/touch-152.png">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/touch-60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/touch-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/touch-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/touch-152.png">
 
 	<script>
 		// Place Google Analytics code here

@@ -55,7 +55,7 @@ function get_template_name() {
 // 		$blog_upload_dir = get_site_url(1).'/wp-content/blogs.dir/'.$blog_id;
 // 		$src = get_site_url(1).'/functions/timthumb/timthumb.php?src='.$blog_upload_dir.strstr($src, '/files/');
 // 	}else
-// 		$src = get_bloginfo('template_directory').'/functions/timthumb/timthumb.php?src='.$src;
+// 		$src = get_stylesheet_directory_uri() . '/functions/timthumb/timthumb.php?src=' . $src;
 
 // 	return $src;
 // }
