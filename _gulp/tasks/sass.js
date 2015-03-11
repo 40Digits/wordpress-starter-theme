@@ -5,11 +5,15 @@ var gulp         = require('gulp'),
 		handleErrors = require('../util/handleErrors'),
 		config       = require('../config'),
 		autoprefixer = require('gulp-autoprefixer'),
-		livereload   = require('gulp-livereload');
+		livereload   = require('gulp-livereload'),
+	    globbing     = require('gulp-css-globbing');
 
 gulp.task('sass', function () {
 	return gulp.src(config.sass.src)
 		.pipe(sourcemaps.init())
+		.pipe(globbing({
+	        extensions: ['.scss', '.sass']
+	    }))
 		.pipe(sass(config.sass.settings))
 		.on('error', handleErrors)
 		.pipe(sourcemaps.write())

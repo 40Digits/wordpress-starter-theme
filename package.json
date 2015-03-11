@@ -1,12 +1,12 @@
 {
-	"name": "forty-theme",
-	"title": "40D WP Boilerplate Theme",
-	"description": "A starter WP Boilerplate with build script.",
+	"name": "forty-eta-build-script",
+	"title": "40D Eta Build Script",
+	"description": "Gulp build script used for internal 40Digits projects.",
 	"version": "1.0.0",
 	"homepage": "http://www.40digits.com",
 	"repository": {
 		"type": "git",
-		"url": "git@bitbucket.org:40digits/wp-boilerplate-v3.git"
+		"url": "git://github.com/40Digits/eta.git"
 	},
 	"browserify": {
 		"transform": [
@@ -33,6 +33,7 @@
 		"gulp-consolidate": "^0.1.2",
 		"gulp-filesize": "0.0.6",
 		"gulp-filter": "^2.0.2",
+		"gulp-css-globbing": "^0.1.7",
 		"gulp-iconfont": "^1.0.0",
 		"gulp-if": "0.0.5",
 		"gulp-imagemin": "^2.2.0",

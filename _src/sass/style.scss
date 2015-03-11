@@ -19,7 +19,7 @@
 @import "helpers/js-breakpoints";
 @import "helpers/fonts";
 @import "helpers/utilities";
-@import "helpers/mixins/all";
+@import "helpers/mixins/*";
 @import "helpers/extends";
 @import "helpers/symbols";
 @import "helpers/sprites";
@@ -41,22 +41,22 @@
 // Layout
 //---------------------------------
 
-@import "layout/all";
+@import "layout/*";
 
 //---------------------------------
 // Vendor
 //---------------------------------
 
-@import "vendor/all";
+@import "vendor/*";
 
 //---------------------------------
 // Modules
 //---------------------------------
 
-@import "modules/all";
+@import "modules/*";
 
 //---------------------------------
 // Application
 //---------------------------------
 
-@import "app/all";
+@import "app/*";
