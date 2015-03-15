@@ -80,33 +80,10 @@ li {
 	line-height: 1;
 }
 
-
 //---------------------------------
-// Placeholder Extend Font Sizes
+// Extend WYSIWYG Styles
 //---------------------------------
 
-// This is handy if you're not using rems and want to control your own sizing based on breakpoint
-// We recommend using REM sizing for this, but have provided several examples to help get you started
-
-%font-large {
-	font-size: em(28px);
-	@include mq(small) {
-		font-size: em(30px);
-	}
-	@include mq(medium) {
-		font-size: em(36px);
-	}
-	@include mq(large) {
-		font-size: em(46px);
-	}
-}
-
-%font-medium {
-	font-size: em(18px);
-	@include mq(medium) {
-		font-size: em(22px);
-	}
-	@include mq(large) {
-		font-size: em(24px);
-	}
+.wysiwyg {
+	@extend %wysiwyg;
 }

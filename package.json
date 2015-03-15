@@ -1,12 +1,12 @@
 {
-	"name": "forty-eta-build-script",
-	"title": "40D Eta Build Script",
-	"description": "Gulp build script used for internal 40Digits projects.",
+	"name": "forty-theme",
+	"title": "40D WP Boilerplate Theme",
+	"description": "A starter WP Boilerplate with build script.",
 	"version": "1.0.0",
 	"homepage": "http://www.40digits.com",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/40Digits/eta.git"
+		"url": "git@bitbucket.org:40digits/wp-boilerplate-v3.git"
 	},
 	"browserify": {
 		"transform": [

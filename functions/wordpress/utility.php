@@ -19,12 +19,18 @@ add_theme_support( 'post-thumbnails' );
 // Get a cleaner template name for pages - use as ID or class in your template containers
 // Called on <body> in header.php
 function get_template_name() {
-  if (is_page()) {
-    global $post;
-    return str_replace('.php', '', get_post_meta($post->ID, '_wp_page_template', true));
-  }
-  return '';
+	if (is_page()) {
+		global $post;
+		return str_replace('.php', '', get_post_meta($post->ID, '_wp_page_template', true));
+	}
+	return '';
 }
+
+// Add Wysiwyg styles to the Wordpress editor.
+function wysiwyg_editor_styles() {
+		add_editor_style( 'style-wysiwyg.css' );
+}
+add_action( 'admin_init', 'wysiwyg_editor_styles' );
 
 //---------------------------------
 // Optional

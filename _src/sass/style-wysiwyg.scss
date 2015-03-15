@@ -1,5 +1,5 @@
 //=================================
-// DEFAULT STYLES
+// WORDPRESS EDITOR STYLES
 //=================================
 
 //---------------------------------
@@ -24,35 +24,12 @@
 // Base
 //---------------------------------
 
-// Default Base
-@import "base/print";
 @import "base/typography";
-@import "base/forms";
-@import "base/keyframes";
-
-// CMS Related
-@import "base/cms-wordpress";
 
 //---------------------------------
-// Layout
+// Extend WYSIWYG Styles
 //---------------------------------
 
-@import "layout/*";
-
-//---------------------------------
-// Vendor
-//---------------------------------
-
-@import "vendor/*";
-
-//---------------------------------
-// Modules
-//---------------------------------
-
-@import "modules/*";
-
-//---------------------------------
-// Application
-//---------------------------------
-
-@import "app/*";
+body#tinymce.wp-editor
+	@extend %wysiwyg;
+	margin: 10px;
