@@ -11,9 +11,7 @@ var gulp         = require('gulp'),
 gulp.task('sass', function () {
 	return gulp.src(config.sass.src)
 		.pipe(sourcemaps.init())
-		.pipe(globbing({
-	        extensions: ['.scss', '.sass']
-	    }))
+		.pipe(globbing(config.sass.globbing))
 		.pipe(sass(config.sass.settings))
 		.on('error', handleErrors)
 		.pipe(sourcemaps.write())

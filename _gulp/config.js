@@ -46,6 +46,9 @@ module.exports = {
 			errLogToConsole: true,
 			style: 'expanded',
 			sourceComments: 'normal'
+		},
+		globbing: {
+			extensions: ['.scss', '.sass']
 		}
 	},
 	autoprefixer: {
