@@ -26,12 +26,12 @@ To setup the wordpress theme, make sure to add the necessary theme declarations 
 
 ```scss
 /*!
-    Theme Name: Project Name
-    Theme URL: http://www.project-url.com/
-    Description: Project or website descriptions.
-    Author: 40Digits
-    Author URI: http://www.40digits.com
-    Version: 0.01
+ *  Theme Name: Project Name
+ *  Theme URL: http://www.project-url.com/
+ *  Description: Project or website descriptions.
+ *  Author: 40Digits
+ *  Author URI: http://www.40digits.com
+ *  Version: 0.01
 */
 ```
 
