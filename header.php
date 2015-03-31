@@ -9,8 +9,6 @@
 
 	<title><?php wp_title('&raquo;','true','right'); ?></title>
 
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
-
 	<link rel="shortcut icon" type="image/ico" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/touch-60.png">
 	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/touch-76.png">

@@ -1,5 +1,12 @@
 <?php
 
+function enqueue_custom_styles() {
+
+	// Add main stylesheet
+	wp_register_style('style.css', (get_stylesheet_directory_uri() . '/style.css'), false, false, all);
+	wp_enqueue_style('style.css');
+}
+
 function enqueue_custom_scripts() {
 
 	// Add modernizr to the header
@@ -17,4 +24,5 @@ function enqueue_custom_scripts() {
 	wp_enqueue_script('site-main');
 
 }
+add_action( 'wp_enqueue_scripts', 'enqueue_custom_styles' );
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_scripts' );
