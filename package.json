@@ -14,13 +14,7 @@
 			"browserify-ejs"
 		]
 	},
-	"browserify-shim": {
-		"plugin": {
-			"depends": [
-				"jquery: window.jQuery"
-			]
-		}
-	},
+	"browserify-shim": "./_src/js/config/shim.js",
 	"devDependencies": {
 		"browserify": "^8.0.2",
 		"browserify-shim": "^3.8.2",

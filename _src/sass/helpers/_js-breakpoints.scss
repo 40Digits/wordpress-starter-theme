@@ -8,11 +8,22 @@
 // Media Query Indicator Mixin
 //---------------------------------
 
+$bp_string: '';
+
 @mixin jsbp($mq-name, $mq-visible-name) {
 	@include mq($mq-name) {
 		head {
 			font-family: $mq-visible-name;
 		}
+	}
+	$bp_string: appendString($bp_string, $mq-visible-name);
+}
+
+@function appendString($string, $string-to-add) {
+	@if $string == '' {
+		@return $string-to-add;
+	} @else {
+		@return #{$string},#{$string-to-add};
 	}
 }
 
@@ -36,3 +47,11 @@
 @include jsbp(xxlarge, 'mq-xxlarge');
 // Desktops Even Larger +
 @include jsbp(xxxlarge, 'mq-xxxlarge');
+
+
+//---------------------------------
+// Ste the Breakpoint Order
+//---------------------------------
+head:after {
+	font-family: $bp_string;
+}

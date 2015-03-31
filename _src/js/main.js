@@ -9,20 +9,9 @@
 ///////////////////////////////////////////////////////////////////////////
 
 var config = require('./config/configMain'),
-	$ = window.jQuery,
-
+	$ = require('jquery'),
 	toRequire = [],
 	toIgnore = [];
-
-// Shims
-// TODO: pull these in via browserify or bower or something
-
-// refresh
-$.fn.refresh=function(){var e=$(this.selector);this.splice(0,this.length);this.push.apply(this,e);return this};
-// [].forEach shim
-if(!Array.prototype.forEach){Array.prototype.forEach=function(t){var n=toObject(this),r=splitString&&_toString(this)==="[object String]"?this.split(""):n,i=arguments[1],s=-1,o=r.length>>>0;if(!isFunction(t)){throw new TypeError}while(++s<o){if(s in r){t.call(i,r[s],s,n)}}}}
-// {}.keys shim
-if(!Object.keys){Object.keys=function(){"use strict";var e=Object.prototype.hasOwnProperty,t=!{toString:null}.propertyIsEnumerable("toString"),n=["toString","toLocaleString","valueOf","hasOwnProperty","isPrototypeOf","propertyIsEnumerable","constructor"],r=n.length;return function(i){if(typeof i!=="object"&&(typeof i!=="function"||i===null)){throw new TypeError("Object.keys called on non-object")}var s=[],o,u;for(o in i){if(e.call(i,o)){s.push(o)}}if(t){for(u=0;u<r;u++){if(e.call(i,n[u])){s.push(n[u])}}}return s}}()}
 
 function queueFiles(i, file){
 	if( file.charAt(0) === '!' ){
@@ -55,4 +44,4 @@ $.each(toRequire, function (i, moduleId) {
 
 // browserfiy solution
 // ========
-return;  require('./modules/sampleModule');  require('./views/sampleView'); 
+return;  require('./lib/polyfill.object.keys');  require('./lib/polyfill.array.forEach');  require('./modules/responsiveImages');  require('./modules/sampleModule');  require('./views/sampleView'); 
