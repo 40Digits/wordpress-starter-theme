@@ -19,17 +19,10 @@
 //---------------------------------
 
 @import "helpers/all";
+@import "helpers/wysiwyg-admin";
 
 //---------------------------------
 // Base
 //---------------------------------
 
 @import "base/typography";
-
-//---------------------------------
-// Extend WYSIWYG Styles
-//---------------------------------
-
-body#tinymce.wp-editor
-	@extend %wysiwyg;
-	margin: 10px;
