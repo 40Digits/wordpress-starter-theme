@@ -19,10 +19,15 @@
 //---------------------------------
 
 @import "helpers/all";
-@import "helpers/wysiwyg-admin";
 
 //---------------------------------
 // Base
 //---------------------------------
 
 @import "base/typography";
+
+//---------------------------------
+// Wysiwyg Styles
+//---------------------------------
+
+@import "helpers/wysiwyg-admin";
