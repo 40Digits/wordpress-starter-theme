@@ -4,7 +4,7 @@ var gulp       = require('gulp'),
 		gulpStart  = require('../util/gulpstart'),
 		livereload = require('gulp-livereload');
 
-gulp.task('watch', ['php', 'html'], function () {
+gulp.task('watch', ['markup'], function () {
 	livereload({ start: true });
 	watch({
 		root: config.watch.src,

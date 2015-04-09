@@ -40,7 +40,7 @@ var browserifyTask = function(callback, devMode) {
 			});
 		});
 
-		var content = fs.readFileSync(config.src + 'main.js').toString().split('========')[0];
+		var content = fs.readFileSync(bundleConfig.sourceJS).toString().split('========')[0];
 
 		content = content + '========' + '\n' + 'return; ';
 
@@ -48,9 +48,9 @@ var browserifyTask = function(callback, devMode) {
 			content = content + toRequire[key];
 		});
 
-		fs.writeFileSync(config.src + 'main.js', content);
+		fs.writeFileSync(bundleConfig.sourceJS, content);
 
-		bundleConfig.entries = [bundleConfig.sourceJS].concat([config.src + 'main.js']);
+		bundleConfig.entries = [bundleConfig.sourceJS].concat([bundleConfig.sourceJS]);
 
 		var bundler = browserify({
 			// Required args
