@@ -16,7 +16,8 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/touch-152.png">
 
 	<script>
-		// Place Google Analytics code here
+		// Place Google Analytics code here - note that any <noscript> iframes
+		// will break <head>, so include it after <body> if you need that snippet
 
 		// Set up site configuration
 		window.config = window.config || {};
