@@ -40,14 +40,14 @@
 		&:before {
 			content: "";
 			@extend .sprite;
-			@include sprite($icon-sun);
+			@include sprite($sun);
 		}
 	}
 	.icon-two {
 		&:before {
 			content: "";
 			@extend .sprite;
-			@include sprite($icon-air);
+			@include sprite($air);
 		}
 	}
 }

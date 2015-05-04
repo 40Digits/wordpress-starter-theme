@@ -4,7 +4,7 @@ var gulp       = require('gulp'),
 		gulpStart  = require('../util/gulpstart'),
 		livereload = require('gulp-livereload');
 
-gulp.task('watch', ['markup'], function () {
+gulp.task('watch', ['php'], function () {
 	livereload({ start: true });
 	watch({
 		root: config.watch.src,
@@ -23,6 +23,9 @@ gulp.task('watch', ['markup'], function () {
 		}, {
 			when: 'sprites/**/*.+(png)',
 			then: gulpStart('sprites')
+		}, {
+			when: 'static/**/*.+(html)',
+			then: gulpStart('static')
 		}]
 	});
 });

@@ -11,8 +11,9 @@ var _source = {
 	sprites:  sourceDir + '/sprites/*.png',
 	styles:   sourceDir + '/sass/**/*.{sass,scss}',
 	symbols:  sourceDir + '/symbols/*.svg',
-	tpl:      sourceDir + '/templates/',
-	markup:   appDir + '**/*.{php,html}'
+	tpl:      sourceDir + '/symbols/tpl/',
+	static:   sourceDir + '/static/',
+	php:      appDir + '**/*.php'
 };
 
 // Assets Directory
@@ -22,7 +23,8 @@ var _assets = {
 	scripts:  assetsDir + '/js/',
 	sprites:  assetsDir + '/images/sprites/',
 	styles:   assetsDir + '/css/',
-	symbols:  assetsDir + '/fonts/symbols/'
+	symbols:  assetsDir + '/fonts/symbols/',
+	static:   appDir
 }
 
 // Gulp options/settings for tasks.
@@ -92,12 +94,25 @@ module.exports = {
 			extname: '.scss'
 		}
 	},
+	static: {
+		src: _source.static,
+		dest: _assets.static,
+		extension: ".html",
+		settings: {
+			prefix: '@@',
+      basepath: '/'
+		},
+	},
 	images: {
 		src: _source.images,
-		dest: _assets.images
+		dest: _assets.images,
+		settings: {
+			progressive: true,
+			optimizationLevel: 4
+		}
 	},
-	markup: {
-		src: _source.markup
+	php: {
+		src: _source.php
 	},
 	watch: {
 		src: _source.root,

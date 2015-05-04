@@ -1,5 +1,5 @@
-$icon-air: -106px -2px 90px 74px;
-$icon-sun: -2px -2px 100px 100px;
+$air: -106px -2px 90px 74px;
+$sun: -2px -2px 100px 100px;
 
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);

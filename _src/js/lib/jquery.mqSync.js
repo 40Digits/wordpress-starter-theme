@@ -7,6 +7,7 @@
 }(function($, window, document) {
 
 	var	$body = $('body'),
+		$orderElement = $('title'),
 		$listenElement = $('head'),
 		mqOrderNamed = !!(mqOrderNamed) ? mqOrderNamed : {},
 		mqOrderNumbered = !!(mqOrderNumbered) ? mqOrderNumbered : [],
@@ -104,8 +105,8 @@
 		 * @param orderedArray An array of the media queries in order from smallest to largest
 		 */
 		setOrder = function () {
-			var mediaQueries = window.getComputedStyle(mqSync.listenElement.get(0), ':after').getPropertyValue('font-family');
-			mqOrderNumbered = mediaQueries.replace(/['"\s]/g, '').split(',');
+			var mediaQueries = $orderElement.css('font-family');
+			mqOrderNumbered = mediaQueries.replace("'", "").split(',');
 			$.each(mqOrderNumbered, function(index, value) {
 				mqOrderNamed[value] = index;
 			});
@@ -216,7 +217,7 @@
 				 * @param newMediaQuery [current] The new media query to load
 				 */
 				update = function (newMediaQuery) {
-					var isLoaded;
+					var isLoaded = false;
 
 					// Default to the current media query - just run an update
 					if (newMediaQuery == null)
@@ -250,11 +251,14 @@
 						}
 
 						// if the new source is not the active source
-						if (!newSource.includes(currentImage['active-src'])) {
+						if (newSource.indexOf(currentImage['active-src']) === -1) {
 
 							// loop over all loaded images and see if the new source has been loaded
 							$.each(currentImage.loaded, function(i) {
-								isLoaded = currentImage.loaded[i].includes(newSource);
+								if (currentImage.loaded[i].indexOf(newSource) > 0) {
+									isLoaded = true;
+									return;
+								}
 							});
 
 							// if the new source has been loaded

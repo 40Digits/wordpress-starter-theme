@@ -19,19 +19,6 @@ select {
 	font-size: 13px;
 }
 
-// Reset all styling for input and textarea, handy for mobile devices
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="email"],
-input[type="password"],
-input[type="button"],
-input[type="submit"],
-textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-
 // Unique styles that just apply to input/textarea/label
 input,
 textarea,
@@ -83,17 +70,6 @@ input[type="submit"] {
 	height: auto;
 }
 
-// Remove spinner from type="number"
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-input[type=number] {
-	-moz-appearance: textfield;
-}
-
 //---------------------------------
 // Placeholders
 //---------------------------------
@@ -123,4 +99,28 @@ input:focus {
 button::-moz-focus-inner {
 	padding: 0;
 	border: 0
+}
+
+// Remove spinner from type="number"
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+// Reset all styling for input and textarea, handy for mobile devices
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="button"],
+input[type="submit"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
