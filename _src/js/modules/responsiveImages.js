@@ -1,8 +1,7 @@
 var $ = require('jquery');
-require('../lib/jquery.mqSync');
+var sassqwatch = require('sassqwatch');
 
 module.exports = function() {
 	// make those images responsive
-	$.mqSync.responsiveImages();
-
+	sassqwatch.responsiveImages();
 };
