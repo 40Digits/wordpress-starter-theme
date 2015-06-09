@@ -48,6 +48,6 @@
 		"vinyl-source-stream": "^1.1.0"
 	},
   "dependencies": {
-    "sassqwatch": "^0.4.0"
+    "sassqwatch": "^0.7.3"
   }
 }
