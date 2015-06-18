@@ -1,7 +1,7 @@
 
 	<?php wp_footer(); ?>
 
-	<?php if ( WP_ENV != 'production' ) { ?>
+	<?php if ( WP_ENV != 'production' ) : ?>
 		<script type='text/javascript'>
 			(function (d, t) {
 				var bh = d.createElement(t), s = d.getElementsByTagName(t)[0],
@@ -11,7 +11,7 @@
 				s.parentNode.insertBefore(bh, s);
 			})(document, 'script');
 		</script>
-	<?php } ?>
+	<?php endif; ?>
 
 </body>
 </html>
