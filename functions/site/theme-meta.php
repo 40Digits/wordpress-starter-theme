@@ -22,9 +22,3 @@
 <link rel="icon" type="image/png" href="<?php echo get_bloginfo('template_directory'); ?>/assets/favicons/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="<?php echo get_bloginfo('template_directory'); ?>/assets/favicons/manifest.json">
 <link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory'); ?>/assets/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="App Name">
-<meta name="application-name" content="App Name">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="<?php echo get_bloginfo('template_directory'); ?>/assets/favicons/mstile-144x144.png">
-<meta name="msapplication-config" content="<?php echo get_bloginfo('template_directory'); ?>/assets/favicons/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
