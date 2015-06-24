@@ -28,9 +28,27 @@ function get_template_name() {
 
 // Add Wysiwyg styles to the Wordpress editor.
 function wysiwyg_editor_styles() {
-		add_editor_style( 'style-wysiwyg.css' );
+	add_editor_style( 'style-wysiwyg.css' );
 }
 add_action( 'admin_init', 'wysiwyg_editor_styles' );
+
+// This function gets the path to a partial based on keeping the /partials/ standard
+// Allows for use of dot notation, i.e. get_partial_path(sub-dir.component) = theme/partials/sub-dir/component.php
+function get_partial_path($name, $extension = 'php', $partials_dir = '/partials/') {
+	$name = str_replace('.', '/', $name);
+
+	// Quality checks for paths n stuff
+	if ($extension[0] === '.')
+		$extension = substr($extension, 1);
+
+	if ($partials[0] !== '/')
+		$partials = '/' . $partials;
+
+	if ($partials[strlen($partials) - 1] !== '/')
+		$partials = $partials . '/';
+
+	return get_template_directory() . $partials_dir . $name . '.' . $extension;
+}
 
 //---------------------------------
 // Optional
