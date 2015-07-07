@@ -4,6 +4,9 @@
 // Required
 //---------------------------------
 
+// Forcing IE Compatibility Mode
+header('X-UA-Compatible: IE=Edge');
+
 // Clean up WP Header
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
