@@ -7,7 +7,7 @@ Your partials should be broken down into respective folders, with individual fil
 You should pull all partial assets with:
 
 ```
-<?php include(get_template_directory() . '/partials/template-name/partial-name.php'); ?>
+<?php include(get_stylesheet_directory() . '/partials/template-name/partial-name.php'); ?>
 ```
 
 If you need a module-like area for repeated code throughout your site, use a `global` folder.
