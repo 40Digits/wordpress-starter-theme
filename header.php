@@ -24,7 +24,7 @@
 
 	<?php
 		// Make sure you go through this file and remove what you aren't using
-		include( get_stylesheet_directory_uri() . '/functions/site/theme-meta.php' );
+		include( get_stylesheet_directory() . '/functions/site/theme-meta.php' );
 	?>
 
 	<?php wp_head(); ?>
