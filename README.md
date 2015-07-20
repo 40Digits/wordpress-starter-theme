@@ -7,18 +7,18 @@ Comes included with:
 - [gulp powered](https://github.com/40Digits/gulp-starter) - comes with sass, browserify, sprite sheet generation, image optimization, and custom icon font generation.
 - Manageable Wordpress Functions
 - Core necessities to get the site running, up to you on what is and isn't needed.
-- Environment Management 
+- Environment Management
 
 For additional [useful functions](http://wiki.40digits.net/resources/wp-functions-to-take-advantage-of/) to take advantage of, read our Wiki article.
 
 ## Installation
 
 * Download theme and place into your Wordpress install. `/wp-content/themes/`
-* or clone repo for
+* or clone repo
 
 ## Build Script Documentation
 
-* [Wiki](https://github.com/40Digits/gulp-starter/wiki)
+* [Wiki](https://github.com/40Digits/gulp-eta/wiki)
 
 ## Stylesheet Declaration
 
@@ -31,8 +31,7 @@ To setup the wordpress theme, make sure to add the necessary theme declarations 
  *  Description: Project or website descriptions.
  *  Author: 40Digits
  *  Author URI: http://www.40digits.com
- *  Version: 0.01
-*/
+ *  Version: 0.01 */
 ```
 
 ## Project README
