@@ -4,7 +4,7 @@ Built to work within the needs of 40Digits, our theme functions as a starting po
 
 Comes included with:
 
-- [gulp powered](https://github.com/40Digits/gulp-starter) - comes with sass, browserify, sprite sheet generation, image optimization, and custom icon font generation.
+- [gulp powered](https://github.com/40Digits/gulp-eta) - comes with sass, browserify, sprite sheet generation, image optimization, and custom icon font generation.
 - Manageable Wordpress Functions
 - Core necessities to get the site running, up to you on what is and isn't needed.
 - Environment Management
