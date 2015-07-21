@@ -1,5 +1,5 @@
 {
-  "name": "Wordpress Starter Theme",
+  "name": "wordpress-starter-theme",
   "version": "1.0.0",
   "description": "A starter bare-bones Wordpress theme framework.",
   "main": "gulpfile.js",
