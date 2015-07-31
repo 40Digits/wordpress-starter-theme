@@ -12,7 +12,7 @@ You should pull all partial assets with:
 <?php include(get_stylesheet_directory() . '/partials/template-name/name-of-partial.php'); ?>
 ```
 
-Or use a really handy utility method that looks much nicer and requires less typing :thumbsup::. Don't include the extension, and begin building the path starting in the `partials` directory. So something like this:
+...Or use a really handy utility method that looks much nicer and requires less typing :thumbsup:. Don't include the extension, and begin building the path starting in the `partials` directory. So something like this:
 
 ```
 <?php include(get_partial_path('template-name/name-of-partial')); ?>
@@ -23,8 +23,6 @@ Would be equivalent to doing:
 ```
 <?php include(get_stylesheet_directory() . '/partials/template-name/name-of-partial.php'); ?>
 ```
-
-But with less typing and looks much cleaner.
 
 Or if you're really fancy, you can use dot notation (which just looks nicer, doesn't it?):
 
