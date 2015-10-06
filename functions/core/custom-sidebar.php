@@ -1,5 +1,9 @@
 <?php
 
+// --------------------------------
+// Register Custom Sidebars
+// --------------------------------
+
 // Duplicate this for each sidebar widget area.
 
 // register_sidebar(array(

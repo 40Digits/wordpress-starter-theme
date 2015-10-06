@@ -63,11 +63,6 @@ function disable_emojis_tinymce( $plugins ) {
 // Hide WP Admin Bar
 //add_filter( 'show_admin_bar', '__return_false' );
 
-// Add custom photo sizes - remember that this creates extra files for every upload
-// if ( function_exists( 'add_image_size' ) ) {
-	// add_image_size( 'crop-name', 300, 300, true );
-// }
-
 // Add responsive container to embed videos
 // function forty_responsive_video( $html ) {
 // 	//add http protocol
