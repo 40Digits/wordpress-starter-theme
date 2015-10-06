@@ -32,6 +32,6 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-eta": "^0.4.0"
+    "gulp-eta": "^0.4.7"
   }
 }
