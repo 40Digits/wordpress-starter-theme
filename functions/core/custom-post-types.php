@@ -5,8 +5,12 @@
 function register_custom_post_types() {
 
 	/*
+	 * Duplicate this for each CPT.
 
-	// Duplicate this for each CPT.
+
+	// --------------------------------
+	// CPT Name
+	// --------------------------------
 
 	$labels = array(
 		'name' => _x('Portfolio', 'post type general name'),
@@ -21,7 +25,6 @@ function register_custom_post_types() {
 		'not_found_in_trash' => __('No Portfolio Items found in Trash'),
 		'parent_item_colon' => '',
 		'menu_name' => 'Portfolio'
-
 	);
 	$args = array(
 		'labels' => $labels,
@@ -29,16 +32,16 @@ function register_custom_post_types() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
-		'show_in_nav_menus' => true,
+		'show_in_nav_menus' => false,
 		'query_var' => true,
 		'rewrite' => array('slug' => 'project'),
 		'capability_type' => 'post',
 		'has_archive' => true,
 		'hierarchical' => false,
-		'menu_position' => 21,
+		'menu_position' => 29,
+		'menu_icon' => 'dashicons-groups',
 		'supports' => array('title', 'page-attributes')
 	);
-
 	register_post_type('portfolio', $args);
 
 	*/

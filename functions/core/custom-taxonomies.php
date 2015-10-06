@@ -4,7 +4,12 @@
 
 function register_custom_taxonomies() {
 
-/*
+	/*
+	 * Duplicate this for each taxonomy.
+
+	// --------------------------------
+	// Taxonomy Name
+	// --------------------------------
 
 	register_taxonomy(
 		'market', // taxononmy ID. Make this unique from CPTs and Pages to avoid URL rewrite headaches.
@@ -16,7 +21,7 @@ function register_custom_taxonomies() {
 			'show_ui' => true,
 			'public' => true,
 			'label' => __('Market'),
-			'show_in_nav_menus' => true,
+			'show_in_nav_menus' => false,
 			'labels' => array(
 				'add_new_item' => 'Add New Market'
 			),
@@ -24,7 +29,7 @@ function register_custom_taxonomies() {
 		)
 	);
 
-*/
+	*/
 
 }
 add_action( 'init', 'register_custom_taxonomies' );
