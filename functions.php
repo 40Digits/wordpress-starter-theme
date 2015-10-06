@@ -18,7 +18,8 @@ include_once('functions/core/custom-menus.php');
 include_once('functions/core/custom-crops.php');
 
 // Partials Include Function
-include_once('functions/site/get-partial-path.php');
+include_once('functions/wordpress/get-partial-path.php');
+
 
 // --------------------------------
 // Options
