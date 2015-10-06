@@ -29,4 +29,4 @@
 
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>  id="<?php echo get_template_name(); ?>">
+<body <?php body_class(); ?>>
