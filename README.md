@@ -20,6 +20,40 @@ For additional [useful functions](http://wiki.40digits.net/resources/wp-function
 
 * [Wiki](https://github.com/40Digits/gulp-eta/wiki)
 
+## NPM Scripts
+
+All `gulp` tasks can be run from a corresponding `npm` script. This allows you to avoid having a global installation of gulp on your local machine. Check out `package.json` in the `scripts` object for the full list of scripts to run out of the box.
+
+To run a task with npm:
+
+```
+npm run [script]
+```
+
+To silence NPM's output (recommended):
+
+```
+npm run -s [script]
+```
+
+Task mappings:
+
+```
+"start": "gulp"
+"init": "gulp init"
+"build:images": "gulp images"
+"build:js": "gulp browserify"
+"build:js:minify": "gulp uglifyJs"
+"build:sass": "gulp sass"
+"build:sass:minify": "gulp minifyCss"
+"build:sprites": "gulp sprites"
+"build:symbols": "gulp symbols"
+"build:static": "gulp static"
+"build:production": "gulp production"
+"watch": "gulp watch"
+"bs": "gulp browserSync"
+```
+
 ## Stylesheet Declaration
 
 To setup the wordpress theme, make sure to add the necessary theme declarations to `_src/sass/style.scss`

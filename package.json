@@ -4,7 +4,20 @@
   "description": "A starter bare-bones Wordpress theme framework.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "init": "gulp init",
+    "build:images": "gulp images",
+    "build:js": "gulp browserify",
+    "build:js:minify": "gulp uglifyJs",
+    "build:sass": "gulp sass",
+    "build:sass:minify": "gulp minifyCss",
+    "build:sprites": "gulp sprites",
+    "build:symbols": "gulp symbols",
+    "build:static": "gulp static",
+    "build:production": "gulp production",
+    "watch": "gulp watch",
+    "bs": "gulp browserSync"
   },
   "repository": {
     "type": "git",
