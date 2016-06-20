@@ -20,9 +20,9 @@ function enqueue_custom_scripts() {
 
 	// Remove default jQuery and add Google hosted version to the footer
 	// Are you building a site that requires IE8? Use: //ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', ('//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'), false, '2.1.3', true);
-	wp_enqueue_script('jquery');
+	wp_deregister_script('jquery-core');
+	wp_register_script('jquery-core', ('//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'), false, '2.1.3', true);
+	wp_enqueue_script('jquery-core');
 
 	// Load the site's main.js file but make sure jQuery is there first
 	wp_register_script('site-main', (get_stylesheet_directory_uri() . '/assets/js/main.js'), array('jquery'), '1.0.0', true);
