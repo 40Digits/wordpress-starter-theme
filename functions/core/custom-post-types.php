@@ -13,18 +13,18 @@ function register_custom_post_types() {
 	// --------------------------------
 
 	$labels = array(
-		'name' => _x('Portfolio', 'post type general name'),
-		'singular_name' => _x('Portfolio Item', 'post type singular name'),
-		'add_new' => _x('Add New', 'portfolio'),
-		'add_new_item' => __('Add New Portfolio Item'),
-		'edit_item' => __('Edit Portfolio Item'),
-		'new_item' => __('New Portfolio Item'),
-		'view_item' => __('View Portfolio Item'),
-		'search_items' => __('Search Portfolio'),
-		'not_found' =>  __('No Portfolio Items found'),
-		'not_found_in_trash' => __('No Portfolio Items found in Trash'),
+		'name' => _x('Movies', 'post type general name'),
+		'singular_name' => _x('Movie', 'post type singular name'),
+		'add_new' => _x('Add New', 'movie'),
+		'add_new_item' => __('Add New Movie'),
+		'edit_item' => __('Edit Movie'),
+		'new_item' => __('New Movie'),
+		'view_item' => __('View Movie'),
+		'search_items' => __('Search Movies'),
+		'not_found' =>  __('No Movies found'),
+		'not_found_in_trash' => __('No Movies found in Trash'),
 		'parent_item_colon' => '',
-		'menu_name' => 'Portfolio'
+		'menu_name' => 'Movies'
 	);
 	$args = array(
 		'labels' => $labels,
@@ -34,7 +34,7 @@ function register_custom_post_types() {
 		'show_in_menu' => true,
 		'show_in_nav_menus' => false,
 		'query_var' => true,
-		'rewrite' => array('slug' => 'project'),
+		'rewrite' => array('slug' => 'movies'),
 		'capability_type' => 'post',
 		'has_archive' => true,
 		'hierarchical' => false,
