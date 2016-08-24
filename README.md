@@ -4,7 +4,6 @@ Built to work within the needs of 40Digits, our theme functions as a starting po
 
 Comes included with:
 
-- [gulp powered](https://github.com/40Digits/gulp-eta) - comes with sass, browserify, sprite sheet generation, image optimization, and custom icon font generation.
 - Manageable Wordpress Functions
 - Core necessities to get the site running, up to you on what is and isn't needed.
 - Environment Management
@@ -18,41 +17,9 @@ For additional [useful functions](http://wiki.40digits.net/resources/wp-function
 
 ## Build Script Documentation
 
-* [Wiki](https://github.com/40Digits/gulp-eta/wiki)
+***NPM Scripts***
 
-## NPM Scripts
-
-All `gulp` tasks can be run from a corresponding `npm` script. This allows you to avoid having a global installation of gulp on your local machine. Check out `package.json` in the `scripts` object for the full list of scripts to run out of the box.
-
-To run a task with npm:
-
-```
-npm run [script]
-```
-
-To silence NPM's output (recommended):
-
-```
-npm run -s [script]
-```
-
-Task mappings:
-
-```
-"start": "gulp"
-"init": "gulp init"
-"build:images": "gulp images"
-"build:js": "gulp browserify"
-"build:js:minify": "gulp uglifyJs"
-"build:sass": "gulp sass"
-"build:sass:minify": "gulp minifyCss"
-"build:sprites": "gulp sprites"
-"build:symbols": "gulp symbols"
-"build:static": "gulp static"
-"build:production": "gulp production"
-"watch": "gulp watch"
-"bs": "gulp browserSync"
-```
+Since the deprecation of Eta, we have since moved to using npm scripts as our build tools and task runner. (For more information on using npm as a build tool feel free to check this How to use npm as a build tool. ) If you're interested in which npm packages we currently use and care to use some of our recipes feel free to check out our 40D-tools-list repo.
 
 ## Stylesheet Declaration
 
