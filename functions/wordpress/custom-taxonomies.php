@@ -1,7 +1,5 @@
 <?php
-
-	// http://codex.wordpress.org/Function_Reference/register_taxonomy
-
+// http://codex.wordpress.org/Function_Reference/register_taxonomy
 function register_custom_taxonomies() {
 
 	/*

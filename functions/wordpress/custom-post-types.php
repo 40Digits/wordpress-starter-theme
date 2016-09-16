@@ -1,7 +1,5 @@
 <?php
-
-	// http://codex.wordpress.org/Function_Reference/register_post_type
-
+// http://codex.wordpress.org/Function_Reference/register_post_type
 function register_custom_post_types() {
 
 	/*
