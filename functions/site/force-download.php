@@ -142,8 +142,9 @@
 				case "htm"  :
 				case "html" :
 				case "txt"  : die("<b>Cannot be used for ". $file_extension ." files!</b>"); break;
-
-				default     : $ctype="application/force-download";
+				
+				default     : die("<b> Not authorized.</b>");
+				//default     : $ctype="application/force-download";
 			}
 
 			header( "Pragma: public" );
