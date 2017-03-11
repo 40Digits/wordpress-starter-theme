@@ -1,7 +1,7 @@
 {
   "name": "wordpress-starter-theme",
   "version": "1.0.0",
-  "description": "A starter bare-bones Wordpress theme framework.",
+  "description": "A starter bare-bones WordPress theme framework.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,20 +13,19 @@
   "author": "40Digits",
   "contributors": [
     {
-      "name": "Besim Huskic",
-      "email": "besim@40digits.com"
+      "name": "Brandon Cash"
     },
     {
-      "name": "Chad Watson",
-      "email": "chad@40digits.com"
+      "name": "Besim Huskic"
     },
     {
-      "name": "CK Hicks",
-      "email": "ck@40digits.com"
+      "name": "Chad Watson"
     },
     {
-      "name": "Grant Holle",
-      "email": "grant@40digits.com"
+      "name": "CK Hicks"
+    },
+    {
+      "name": "Grant Holle"
     }
   ],
   "license": "ISC",
