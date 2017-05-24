@@ -2,7 +2,7 @@
   "name": "wordpress-starter-theme",
   "version": "1.0.0",
   "description": "A starter bare-bones WordPress theme framework.",
-  "main": "gulpfile.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
