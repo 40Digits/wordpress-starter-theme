@@ -35,54 +35,71 @@ To setup the WordPress theme, make sure to add the necessary theme declarations 
 
 ## Project README
 
-All new projects should contain the following information in their `README.md` repo root repository. Yes, you can remove this readme if you start a new theme.
-
-* Active and development URLs
-* Git branch information
-* Project Manager
-* Developers and their respective roles + major contributions to the project
-* Notes
-
-Here is a project sample:
-
 ```md
-# Project X
 
-***
+# Project Name
+
+## Getting Started
+
+### Installation -- (What has to happen to get this running on your local?)
+
+* What version of Node/NPM/WP do you need to have?
+* Is there a database? Is there something special about it?
+* Is there a specific order you have to activate plugins in?
+* Do any sitewide functions rely on a specific URL for local development?
+
+### Environment
+
+Laravel, WordPress, Tumblr, Static HTML, Express, etc.
+
+### Build Script
+
+**Which set of build tools is it using? Is there any special configuration?**
 
 ## URLs
-* Live - http://www.site-name.com
-* Staging - http://staging.site-name.com
-* Development - http://project.test.site-name.com
+
+* [Dropbox]()
+* [LiquidPlanner]()
+* [Invision]()
+* [Repository]()
+
+### Environment URLs:
+
+* Live - [LIVE]()
+* Development - [DEV]()
 
 ## Git Branches
 
-* Development
-* Master
+* `origin/development` -- Autobuilds DEV
+* `origin/master` -- Bitbucket Main Branch
+* `production/master` -- Git Push for WPE
 
-Master needs to be pushed to the WPE origin.
+## Deployment Instructions
 
-***
+* Does it auto-build on push? Which branch?
+* Do we manually push the code somewhere?
+* Who hosts it and where?
 
-## Project Manager(s)
-* John Macklin
+## Development Notes
 
-## Developer(s)
+### Naming Conventions and Standards
 
-#### Leslie Knoppe
-* Front-End
-* Content Modules
-* Blog
+* Partial Naming: partials/name_of_module.php
+* SASS Naming: _src/sass/matching-name-of-module.scss
+* Template Naming: templates/name-of-template.php
+* ACF Styles:
+   * Seamless
+   * field name: name_here
+   *  repeater layout: block
+   * image field: medium preview, image array return value
+* CSS Units: all sizes will be in rem(00px) format, unless percentage
 
-#### Andy Dwyer
-* Act-On Integration with Forms
-* Member Registration
-* Event Registration
+### !Importants
 
-#### Tom Haverford
-* ONE DAY to Feed the World
+**We all do them at times to help speed up development and get things out the door. To reduce technical debt in the future and help aid in future fixes, why did you put an !important where you did and what can be done to fix it?**
 
-***
+### Critical Functions
 
-## Notes
+**Is there anything that was made unique for this project that it's critical to know how to work with before developing? (examples: TailorPress, any auto-populating ACF fields, any use of the WP API, custom-built gallery fields, etc)**
+
 ```
