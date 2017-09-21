@@ -40,6 +40,9 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
+// Disallow Theme Edits
+define('DISALLOW_FILE_EDIT',true);
+
 
 // --------------------------------
 // Fixes
