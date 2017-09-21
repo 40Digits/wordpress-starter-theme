@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!--[if lte IE 9]><html class="no-js lt-ie10"><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
