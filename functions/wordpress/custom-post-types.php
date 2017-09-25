@@ -1,5 +1,5 @@
 <?php
-// http://codex.wordpress.org/Function_Reference/register_post_type
+// https://codex.wordpress.org/Function_Reference/register_post_type
 function register_custom_post_types() {
 
 	/*
@@ -40,7 +40,7 @@ function register_custom_post_types() {
 		'menu_icon' => 'dashicons-groups',
 		'supports' => array('title', 'page-attributes')
 	);
-	register_post_type('portfolio', $args);
+	register_post_type('movie', $args);
 
 	*/
 
