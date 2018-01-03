@@ -1,8 +1,6 @@
 <?php
-
-// --------------------------------
-// Required
-// --------------------------------
+// Disallow Theme Edits
+define('DISALLOW_FILE_EDIT',true);
 
 // Forcing IE Compatibility Mode
 header('X-UA-Compatible: IE=Edge');
@@ -40,26 +38,11 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
-// Disallow Theme Edits
-define('DISALLOW_FILE_EDIT',true);
-
-
-// --------------------------------
-// Fixes
-// --------------------------------
-
-// Fix translate-z with chrome in the admin
-// add_action( 'admin_enqueue_scripts', 'chrome_fix' );
-// function chrome_fix() {
-//   if ( strpos( $_SERVER[ 'HTTP_USER_AGENT' ], 'Chrome' ) !== false ) {
-//     wp_add_inline_style( 'wp-admin', '#adminmenu { transform: translateZ(0) }' );
-//   }
-// }
-
-
-//---------------------------------
-// Optional
-//---------------------------------
+// Move Yoast SEO to bottom of admin pages
+function move_yoast_to_bottom() {
+  return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'move_yoast_to_bottom');
 
 // Hide WP Admin Bar
 // add_filter( 'show_admin_bar', '__return_false' );
